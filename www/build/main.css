@@ -37002,6 +37002,89 @@ page-edit-event #map {
   height: 50%;
 }
 
+page-home [default-background] {
+  height: 100%;
+  width: 100%;
+  display: table;
+  background-color: #00ff36 !important;
+  background-blend-mode: multiply;
+}
+
+page-home [default-background]::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00ff36;
+  mix-blend-mode: multiply;
+}
+
+page-home [default-background]::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #23278a;
+  mix-blend-mode: lighten;
+}
+
+page-home [default-background] .ionic-description {
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 999;
+  position: relative;
+}
+
+page-home [default-background] .ionic-description h2[item-title] {
+  margin: 0;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+page-home [default-background] .ionic-description p[item-subtitle] {
+  color: white !important;
+  z-index: 999;
+  position: relative;
+}
+
+page-home [default-background] a {
+  color: #21e7b6 !important;
+  text-decoration: underline;
+  visibility: visible !important;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  z-index: 999;
+}
+
+page-home ion-navbar [buy] .title-ios {
+  width: 90%;
+}
+
+page-home ion-navbar [buy] .button-ios {
+  height: 3rem !important;
+  position: absolute;
+  right: 5px;
+  top: 20px !important;
+}
+
+page-home ion-navbar [buy] ion-title {
+  width: 70%;
+}
+
+page-home ion-navbar [buy] [defoult-button] {
+  background: #21E7B6;
+  color: #fff;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
 page-login ion-grid,
 page-login ion-row {
   height: 100%;
