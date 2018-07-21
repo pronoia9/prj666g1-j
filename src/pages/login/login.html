@@ -1,36 +1,17 @@
 <ion-header>
   <ion-navbar>
-      <button ion-button menuToggle> <ion-icon name="menu"></ion-icon> </button>
+      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
       <ion-title>Login</ion-title>
   </ion-navbar>
 </ion-header>
-  
-<!--
-<ion-content padding>
-    <ion-item>
-      <ion-label floating>Email</ion-label>
-      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-    </ion-item>
-  
-    <p color="light" (click)="resetPwd()">forget password?</p>
-  
-    <button ion-button (click)="login(user)">Login</button>
-    <button ion-button color="light" (click)="register()">Register</button>
-  </ion-content>
--->
 
 <ion-content>
   <ion-grid no-padding>
     <ion-row padding-horizontal align-self-center>
 
       <ion-col align-self start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-        <button ion-button button-clear text-capitalize clear float-left></button>
-        <button ion-button button-clear text-capitalize clear float-right (click)="resetPwd()"></button>
+        <button ion-button button-clear text-capitalize clear float-left>Remember Me</button>
+        <button ion-button button-clear text-capitalize clear float-right (click)="resetPwd()">Forgot Password</button>
       </ion-col>
       
       <ion-col align-self-end col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
