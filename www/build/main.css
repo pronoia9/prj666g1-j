@@ -36994,6 +36994,69 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+[header-background-image] {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-color: #00ff36 !important;
+  background-blend-mode: multiply;
+}
+
+[header-background-image]::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00ff36;
+  mix-blend-mode: multiply;
+}
+
+[header-background-image]::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #23278a;
+  mix-blend-mode: lighten;
+}
+
+[header-background-image] [header-title] {
+  padding-right: 10%;
+  z-index: 99999;
+  font-weight: bold;
+  color: white !important;
+  position: relative;
+}
+
+[header-background-image] img {
+  position: relative;
+  display: block;
+  padding-top: 24px;
+  max-width: 60px;
+  z-index: 99999;
+  position: relative;
+}
+
+[header-background-image] p {
+  font-size: 14px !important;
+  color: white;
+  z-index: 99999;
+  position: relative;
+}
+
+ion-header [class^="icon-"]:before, ion-header [class*=" icon-"]:before {
+  width: auto !important;
+  margin-left: 0 !important;
+}
+
+[main-menu] .item-inner {
+  margin-left: 6px !important;
+}
+
 page-create-event #map {
   height: 50%;
 }
