@@ -23,6 +23,9 @@ export class RegisterPage {
       if (user.password.length < 6 || user.password.length > 18){
         throw {code: "pwd/length"};
       }
+      /*if (user.password != user.retypePassword){
+        throw {code: "pwd/match"};
+      }*/
       const result = await firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
       .then((res) => {
         let user = firebase.auth().currentUser;

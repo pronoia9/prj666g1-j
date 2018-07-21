@@ -270,13 +270,9 @@ var LoginPage = /** @class */ (function () {
     LoginPage.prototype.resetPwd = function () {
         this.navCtrl.push('ResetPage');
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Object)
-    ], LoginPage.prototype, "data", void 0);
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n      <button ion-button menuToggle> <ion-icon name="menu"></ion-icon> </button>\n      <ion-title>Login</ion-title>\n  </ion-navbar>\n</ion-header>\n  \n<!--\n<ion-content padding>\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input type="email" [(ngModel)]="user.email"></ion-input>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password" [(ngModel)]="user.password"></ion-input>\n    </ion-item>\n  \n    <p color="light" (click)="resetPwd()">forget password?</p>\n  \n    <button ion-button (click)="login(user)">Login</button>\n    <button ion-button color="light" (click)="register()">Register</button>\n  </ion-content>\n-->\n\n<ion-content>\n  <ion-grid no-padding>\n    <ion-row padding-horizontal align-self-center>\n\n      <ion-col align-self start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <button ion-button button-clear text-capitalize clear float-left></button>\n        <button ion-button button-clear text-capitalize clear float-right (click)="resetPwd()"></button>\n      </ion-col>\n      \n      <ion-col align-self-end col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <!--Logo-->\n        <img src="../../assets/icon/favicon.ico">\n        <!--Logo Subtitle-->\n        <h2 login-subtitle no-margin>Welcome</h2>\n        <!---Logo Title-->\n        <h1 ion-text padding-bottom login-title no-margin>Login to your account</h1>\n      </ion-col>\n\n      <ion-col align-self-start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <!--Input field username-->\n        <ion-item transparent>\n          <ion-label stacked>Email</ion-label>\n          <ion-input required placeholder="email" type="email" [(ngModel)]="user.email"></ion-input>\n        </ion-item>\n\n        <!--Input field password-->\n        <ion-item transparent>\n            <ion-label stacked>Password</ion-label>\n            <ion-input required type="password" placeholder="password" [(ngModel)]="user.password"></ion-input>\n        </ion-item>\n      </ion-col>\n\n      <!--Share Section-->\n      <ion-col align-self-end bottom-form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <!---Login button-->\n        <button ion-button  full text-capitalize default-button>Login</button>\n        <!---Facebook button-->\n        <button ion-button default-button color="facebook" full text-capitalize block>Login with Facebook</button>\n        <!---Google button-->\n        <button ion-button default-button color="goole" full text-capitalize block>Login with Google</button>\n        <!---Twitter button-->\n        <button ion-button default-button color="twitter" full text-capitalize block>Login with Twitter</button>\n      </ion-col>\n\n      <ion-col col-12>\n        <div description text-center>\n          <p>Don\'t have an account? <a text-capitalize ion-text color="primary" (click)="register()">Register</a></p>\n        </div>\n      </ion-col>\n      <!--End Share Section-->\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>\n      <ion-title>Login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid no-padding>\n    <ion-row padding-horizontal align-self-center>\n\n      <ion-col align-self start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <button ion-button button-clear text-capitalize clear float-left>Some other button</button>\n        <button ion-button button-clear text-capitalize clear float-right (click)="resetPwd()">Forgot Password</button>\n      </ion-col>\n      \n      <ion-col align-self-end col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <!--Logo-->\n        <img src="../../assets/icon/favicon.ico">\n        <!--Logo Subtitle-->\n        <h2 login-subtitle no-margin>Welcome</h2>\n        <!---Logo Title-->\n        <h1 ion-text padding-bottom login-title no-margin>Login to your account</h1>\n      </ion-col>\n\n      <ion-col align-self-start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <!--Input field username-->\n        <ion-item transparent>\n          <ion-label stacked>Email</ion-label>\n          <ion-input required placeholder="email" type="email" [(ngModel)]="user.email"></ion-input>\n        </ion-item>\n\n        <!--Input field password-->\n        <ion-item transparent>\n            <ion-label stacked>Password</ion-label>\n            <ion-input required type="password" placeholder="password" [(ngModel)]="user.password"></ion-input>\n        </ion-item>\n      </ion-col>\n\n      <!--Share Section-->\n      <ion-col align-self-end bottom-form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <!---Login button-->\n        <button ion-button  full text-capitalize default-button (click)="login(user)">Login</button>\n        <!---Facebook button-->\n        <button ion-button default-button color="facebook" full text-capitalize block>Login with Facebook</button>\n        <!---Google button-->\n        <button ion-button default-button color="goole" full text-capitalize block>Login with Google</button>\n        <!---Twitter button-->\n        <button ion-button default-button color="twitter" full text-capitalize block>Login with Twitter</button>\n      </ion-col>\n\n      <ion-col col-12>\n        <div description text-center>\n          <p>Don\'t have an account? <a text-capitalize ion-text color="primary" (click)="register()">Register</a></p>\n        </div>\n      </ion-col>\n      <!--End Share Section-->\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */],
@@ -567,7 +563,7 @@ var map = {
 		12
 	],
 	"../pages/edit-profile/edit-profile.module": [
-		745,
+		742,
 		11
 	],
 	"../pages/friend-list/friend-list.module": [
@@ -602,11 +598,11 @@ var map = {
 		9
 	],
 	"../pages/register/register.module": [
-		742,
+		743,
 		8
 	],
 	"../pages/reset/reset.module": [
-		743,
+		744,
 		7
 	],
 	"../pages/view-event-participants/view-event-participants.module": [
@@ -614,7 +610,7 @@ var map = {
 		6
 	],
 	"../pages/view-event/view-event.module": [
-		744,
+		745,
 		1
 	]
 };
@@ -766,6 +762,7 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/create-event/create-event.module#CreateEventPageModule', name: 'CreateEventPage', segment: 'create-event', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-event/edit-event.module#EditEventPageModule', name: 'EditEventPage', segment: 'edit-event', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/friend-list/friend-list.module#FriendListPageModule', name: 'FriendListPage', segment: 'friend-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
@@ -777,8 +774,7 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/reset/reset.module#ResetPageModule', name: 'ResetPage', segment: 'reset', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/view-event-participants/view-event-participants.module#ViewEventParticipantsPageModule', name: 'ViewEventParticipantsPage', segment: 'view-event-participants', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/view-event/view-event.module#ViewEventPageModule', name: 'ViewEventPage', segment: 'view-event', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/view-event/view-event.module#ViewEventPageModule', name: 'ViewEventPage', segment: 'view-event', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_13_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_18__app_api_config__["a" /* FIREBASE_CONFIG */]),

@@ -9,8 +9,7 @@ import { AngularFireAuth } from "angularfire2/auth"
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  @Input() data: any;
-
+  
   user = {} as User;
   err_msg = "";
 
