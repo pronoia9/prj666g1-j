@@ -1,1 +1,2 @@
-# prj666g1-jay
+# MeeTogether
+PRJ666-g1

@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the QrScanPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @IonicPage()
 @Component({
@@ -14,16 +8,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'qr-scan.html',
 })
 export class QrScanPage {
+  code = "";
+  callback: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private barcodeScanner: BarcodeScanner) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QrScanPage');
   }
 
-  qrSucceed(){
-    this.navCtrl.pop();
+  scanCode() {
+    this.barcodeScanner.scan().then(barcodeData => {
+      this.code = barcodeData.text;
+      this.navCtrl.pop();
+    }, (err) => {
+      console.log("Cannot Read QR Code!");
+    });
   }
 
+  ionViewWillEnter(){
+    this.callback = this.navParams.get("callback");
+  }
+
+  ionViewDidEnter(){
+    this.scanCode();
+  }
+
+  ionViewWillLeave() {
+    this.callback(this.code);
+}
 }
