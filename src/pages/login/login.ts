@@ -10,9 +10,9 @@ import * as firebase from 'firebase';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  data: any = { "toolbarTitle" : "Login", 
+  data: any = { "toolbarTitle"   : "Login", 
                 "forgotPassword" : "Forgot password?",
-                "other" : "A button",
+                "other"          : "Test User",
                 "subtitle"       : "Welcome",
                 "labelEmail"     : "EMAIL",
                 "labelUsername"  : "USERNAME",

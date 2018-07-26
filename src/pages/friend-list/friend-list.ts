@@ -16,7 +16,14 @@ import * as firebase from 'firebase';
   templateUrl: 'friend-list.html',
 })
 export class FriendListPage {
+
+  data: any = { "toolbarTitle"  : "Friends",
+                "title"         : "Search for friend",
+                "headerImage"  : "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg",
+                "items" : [] }; // items : [] is for (same as) friendList = []
   user = {} as User;
+  searchTerm: any = "";
+  allItems: any;
   friendList = [];
 
   constructor(public navCtrl: NavController,
@@ -42,6 +49,9 @@ export class FriendListPage {
           f.lastName = friend.data().lastName;
           f.username = friend.data().username;
           f.email = friend.data().email;
+          if (f.avatar == null || f.avatar == "") {
+            f.avatar = "assets/images/avatar/25.jpg";
+          }
           this.friendList.push(f);
         });
       });
@@ -50,5 +60,8 @@ export class FriendListPage {
 
   addFriend(){
     this.navCtrl.push('AddFriendPage',this.user);
+  }
+
+  search(item: any) {
   }
 }

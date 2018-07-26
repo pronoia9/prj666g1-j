@@ -4,7 +4,7 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>{{data.toolbarTitle}}</ion-title>
+      <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->
     </ion-navbar>
   
   </ion-header>
@@ -14,7 +14,7 @@
       <ion-row padding-horizontal align-self-center>
   
         <ion-col align-self start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-          <button ion-button button-clear text-capitalize clear float-left>{{data.other}}</button>
+          <button ion-button button-clear text-capitalize clear float-left (click)="login(user)">{{data.other}}</button>
           <button ion-button button-clear text-capitalize clear float-right (click)="resetPwd()">{{data.forgotPassword}}</button>
         </ion-col>
         

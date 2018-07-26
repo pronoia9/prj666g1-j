@@ -29,11 +29,8 @@ var HomePage = /** @class */ (function () {
         this.navParams = navParams;
         this.data = { "toolbarTitle": "Home",
             "title": "MeeTogether",
-            "subtitle": "PRJ666 Group 1",
-            "subtitle2": "Dennis Arul",
-            "subtitle3": "Jay Ansin",
-            "subtitle4": "Shlok Purani",
-            "subtitle5": "Yankai Tian (leader)",
+            "subtitle": "- Group 1 -",
+            "subtitle2": "Something something dark side",
             "link": "https://zenit.senecac.on.ca/~prj666_182a01/",
             "description": "Link to zenit",
             "background": "assets/images/images/" + Math.ceil(Math.random() * 17) + ".jpg" };
@@ -54,7 +51,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon class="icon-menu" name="menu"></ion-icon>\n    </button>\n    <ion-title>{{data.toolbarTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div *ngIf="data != null && data.background != null" background-size default-background [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n    <div class="ionic-description" text-center>\n      <h2 item-title>{{data.title}}</h2>\n      <h2 item-title>{{data.subtitle}}</h2>\n      <p item-subtitle>{{data.subtitle2}}</p>\n      <p item-subtitle>{{data.subtitle3}}</p>\n      <p item-subtitle>{{data.subtitle4}}</p>\n      <p item-subtitle>{{data.subtitle5}}</p>\n    </div>\n    <a [href]="data.link" target="_blank">{{data.description}}</a>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/home/home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon class="icon-menu" name="menu"></ion-icon>\n    </button>\n    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div *ngIf="data != null && data.background != null" background-size default-background [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n    <div class="ionic-description" text-center>\n      <h2 item-title>{{data.title}}</h2>\n      <h2 item-title>{{data.subtitle}}</h2>\n      <p item-subtitle>{{data.subtitle2}}</p>\n    </div>\n    <a [href]="data.link" target="_blank">{{data.description}}</a>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/home/home.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */],
@@ -99,7 +96,12 @@ var FriendListPage = /** @class */ (function () {
     function FriendListPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.data = { "toolbarTitle": "Friends",
+            "title": "Search for friend",
+            "headerImage": "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg",
+            "items": [] }; // items : [] is for (same as) friendList = []
         this.user = {};
+        this.searchTerm = "";
         this.friendList = [];
         this.user.uid = __WEBPACK_IMPORTED_MODULE_2_firebase__["auth"]().currentUser.uid;
     }
@@ -120,6 +122,9 @@ var FriendListPage = /** @class */ (function () {
                     f.lastName = friend.data().lastName;
                     f.username = friend.data().username;
                     f.email = friend.data().email;
+                    if (f.avatar == null || f.avatar == "") {
+                        f.avatar = "assets/images/avatar/25.jpg";
+                    }
                     _this.friendList.push(f);
                 });
             });
@@ -128,9 +133,11 @@ var FriendListPage = /** @class */ (function () {
     FriendListPage.prototype.addFriend = function () {
         this.navCtrl.push('AddFriendPage', this.user);
     };
+    FriendListPage.prototype.search = function (item) {
+    };
     FriendListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-friend-list',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/friend-list/friend-list.html"*/'<!--\n  Generated template for the FriendListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Friend List</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item *ngFor="let f of friendList">\n      <ion-icon ios="ios-person" md="md-person"></ion-icon>\n        {{f.username}} as {{f.firstName}} {{f.lastName}}\n        <p>\n          <ion-icon ios="ios-mail" md="md-mail"></ion-icon>\n          {{f.email}}\n        </p>\n    </ion-item>\n  </ion-list>\n\n  <ion-fab bottom right>\n    <button ion-fab (click)="addFriend()">\n      <ion-icon ios="ios-add" md="md-add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/friend-list/friend-list.html"*/,
+            selector: 'page-friend-list',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/friend-list/friend-list.html"*/'<ion-header header-ios>\n    <ion-navbar transparent>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->\n    </ion-navbar>\n\n    <ion-toolbar no-padding>\n        <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n          <div search-bar-bcg>\n            <!-- Header Title -->\n            <h1 ion-text no-margin padding-left search-bar-title>{{data.title}}</h1>\n            <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="search(searchTerm)"></ion-searchbar>\n          </div>\n        </div>\n      </ion-toolbar>    \n</ion-header>\n\n\n<!-- Content -->\n<ion-content elastic-header>\n    <ion-list *ngIf="friendList != null">\n      <ion-item border no-lines *ngFor="let friend of friendList; let i = index">\n        <ion-avatar item-start>\n          <img [src]="friend.avatar"/>\n        </ion-avatar>\n        <h2 item-title>{{friend.firstName}} {{friend.lastName}}</h2>\n        <h3 item-subtitle text-wrap>{{friend.username}}</h3>\n        <button text-capitalize button-clear ion-button item-end clear><ion-icon name="more"></ion-icon></button>\n      </ion-item>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/friend-list/friend-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
@@ -209,7 +216,7 @@ var LoginPage = /** @class */ (function () {
         this.toastCtrl = toastCtrl;
         this.data = { "toolbarTitle": "Login",
             "forgotPassword": "Forgot password?",
-            "other": "A button",
+            "other": "Test User",
             "subtitle": "Welcome",
             "labelEmail": "EMAIL",
             "labelUsername": "USERNAME",
@@ -315,7 +322,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/'<ion-header>\n\n    <ion-navbar>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>{{data.toolbarTitle}}</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  <ion-content>\n    <ion-grid no-padding *ngIf = "data != null">\n      <ion-row padding-horizontal align-self-center>\n  \n        <ion-col align-self start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <button ion-button button-clear text-capitalize clear float-left>{{data.other}}</button>\n          <button ion-button button-clear text-capitalize clear float-right (click)="resetPwd()">{{data.forgotPassword}}</button>\n        </ion-col>\n        \n        <ion-col align-self-end col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!--Logo-->\n          <img [src]="data.logo">\n          <!--Logo Subtitle-->\n          <h2 login-subtitle no-margin>{{data.subtitle}}</h2>\n          <!---Logo Title-->\n          <h1 ion-text padding-bottom login-title no-margin>{{data.title}}</h1>\n        </ion-col>\n  \n        <ion-col align-self-start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!---Input field username-->\n          <ion-item transparent>\n            <ion-label stacked>{{data.labelEmail}}</ion-label>\n            <ion-input required placeholder="{{data.email}}" type="email" [(ngModel)]="user.email"></ion-input>\n          </ion-item>\n  \n          <!--Input field password-->\n          <ion-item transparent>\n            <ion-label stacked>{{data.labelPassword}}</ion-label>\n            <ion-input required type="password" placeholder="{{data.password}}" [(ngModel)]="password"></ion-input>\n          </ion-item>\n        </ion-col>\n  \n        <!--Share Section-->\n        <ion-col align-self-end bottom-form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!---Login button-->\n          <button ion-button  full text-capitalize default-button (click)="login(user)">Login</button>\n          <!---Facebook button-->\n          <button ion-button default-button color="facebook" full text-capitalize block><ion-icon name="logo-facebook"></ion-icon> Login with Facebook</button>\n          <!---Google button-->\n          <button ion-button default-button google-button color="google" full text-capitalize block><ion-icon name="logo-google"></ion-icon> Login with Google</button>\n        </ion-col>\n  \n        <ion-col col-12>\n          <div description text-center>\n            <p>Don\'t have an account? <a text-capitalize ion-text color="primary" (click)="register()">Register</a></p>\n          </div>\n        </ion-col>\n        <!--End Share Section-->\n      </ion-row>\n    </ion-grid>\n  </ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/'<ion-header>\n\n    <ion-navbar>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n    </ion-navbar>\n  \n  </ion-header>\n  \n  <ion-content>\n    <ion-grid no-padding *ngIf = "data != null">\n      <ion-row padding-horizontal align-self-center>\n  \n        <ion-col align-self start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <button ion-button button-clear text-capitalize clear float-left (click)="login(user)">{{data.other}}</button>\n          <button ion-button button-clear text-capitalize clear float-right (click)="resetPwd()">{{data.forgotPassword}}</button>\n        </ion-col>\n        \n        <ion-col align-self-end col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!--Logo-->\n          <img [src]="data.logo">\n          <!--Logo Subtitle-->\n          <h2 login-subtitle no-margin>{{data.subtitle}}</h2>\n          <!---Logo Title-->\n          <h1 ion-text padding-bottom login-title no-margin>{{data.title}}</h1>\n        </ion-col>\n  \n        <ion-col align-self-start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!---Input field username-->\n          <ion-item transparent>\n            <ion-label stacked>{{data.labelEmail}}</ion-label>\n            <ion-input required placeholder="{{data.email}}" type="email" [(ngModel)]="user.email"></ion-input>\n          </ion-item>\n  \n          <!--Input field password-->\n          <ion-item transparent>\n            <ion-label stacked>{{data.labelPassword}}</ion-label>\n            <ion-input required type="password" placeholder="{{data.password}}" [(ngModel)]="password"></ion-input>\n          </ion-item>\n        </ion-col>\n  \n        <!--Share Section-->\n        <ion-col align-self-end bottom-form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!---Login button-->\n          <button ion-button  full text-capitalize default-button (click)="login(user)">Login</button>\n          <!---Facebook button-->\n          <button ion-button default-button color="facebook" full text-capitalize block><ion-icon name="logo-facebook"></ion-icon> Login with Facebook</button>\n          <!---Google button-->\n          <button ion-button default-button google-button color="google" full text-capitalize block><ion-icon name="logo-google"></ion-icon> Login with Google</button>\n        </ion-col>\n  \n        <ion-col col-12>\n          <div description text-center>\n            <p>Don\'t have an account? <a text-capitalize ion-text color="primary" (click)="register()">Register</a></p>\n          </div>\n        </ion-col>\n        <!--End Share Section-->\n      </ion-row>\n    </ion-grid>\n  </ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */],
@@ -512,6 +519,10 @@ var ProfilePage = /** @class */ (function () {
         this.navParams = navParams;
         this.afAuth = afAuth;
         this.toast = toast;
+        this.data = { "toolbarTitle": "Profile",
+            "title": "",
+            "subtitle": "",
+            "background": "assets/images/images/" + Math.ceil(Math.random() * 17) + ".jpg" };
         this.user = {};
         this.user.uid = afAuth.auth.currentUser.uid;
         this.user.email = afAuth.auth.currentUser.email;
@@ -537,6 +548,9 @@ var ProfilePage = /** @class */ (function () {
                 _this.user.username = doc.data().username;
                 _this.user.firstName = doc.data().firstName;
                 _this.user.lastName = doc.data().lastName;
+                if (_this.user.avatar == null) {
+                    _this.user.avatar = "assets/images/avatar/25.jpg";
+                }
             }
         });
     };
@@ -561,7 +575,7 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/profile/profile.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Profile</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-avatar block>\n    <img class="circle-pic" \n    src="https://firebasestorage.googleapis.com/v0/b/meetogether-prj666g1.appspot.com/o/avatar%2Fdefault_avatar.png?alt=media&token=c0c88e7e-71cd-4de5-aa78-27573c8f3f2a" />\n  </ion-avatar>\n  {{user.avatar}}\n  <ion-item (click)="getQr()">\n    <ion-icon ios="ios-finger-print" md="md-finger-print"></ion-icon>\n    Show QR Code\n  </ion-item>\n  <ion-item>\n    <ion-icon ios="ios-mail" md="md-mail"></ion-icon>\n    {{user.email}}\n  </ion-item>\n  <ion-item>\n    <ion-icon ios="ios-glasses" md="md-glasses"></ion-icon>\n    {{user.username}}\n  </ion-item>\n  <ion-item>\n    <ion-icon ios="ios-contact" md="md-contact"></ion-icon>\n    {{user.firstName}} {{user.lastName}}\n  </ion-item>\n  <button ion-button clear block (click)="editProfile()">Edit Profile</button>\n  <button ion-button block (click) = "changePwd()">Change Password</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/profile/profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/profile/profile.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n    <div padding background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n        <ion-thumbnail *ngIf="user != null"><img [src]="user.avatar" /></ion-thumbnail>\n          <!-- Parallx Title -->\n          <h2 text-center parallax-title *ngIf="user != null">{{user.firstName}} {{user.lastName}}</h2>\n          <!-- Parallx Subtitle -->\n          <h3 text-center parallax-subtitle *ngIf="user != null">{{user.username}}</h3>\n      </div>\n\n      \n  <ion-item (click)="getQr()">\n    <ion-icon ios="ios-finger-print" md="md-finger-print"></ion-icon>\n    Show QR Code\n  </ion-item>\n  <ion-item>\n    <ion-icon ios="ios-mail" md="md-mail"></ion-icon>\n    {{user.email}}\n  </ion-item>\n  <ion-item>\n    <ion-icon ios="ios-glasses" md="md-glasses"></ion-icon>\n    {{user.username}}\n  </ion-item>\n  <ion-item>\n    <ion-icon ios="ios-contact" md="md-contact"></ion-icon>\n    {{user.firstName}} {{user.lastName}}\n  </ion-item>\n  <button ion-button clear block (click)="editProfile()">Edit Profile</button>\n  <button ion-button block (click) = "changePwd()">Change Password</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/profile/profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],

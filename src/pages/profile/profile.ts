@@ -12,6 +12,10 @@ import * as firebase from 'firebase';
 })
 export class ProfilePage {
 
+  data: any = { "toolbarTitle"   : "Profile", 
+                "title" : "",
+                "subtitle" : "",
+                "background": "assets/images/images/" + Math.ceil(Math.random() * 17) + ".jpg" };
   user = {} as User;
 
   constructor(public navCtrl: NavController,
@@ -45,6 +49,9 @@ export class ProfilePage {
         this.user.username = doc.data().username;
         this.user.firstName = doc.data().firstName;
         this.user.lastName = doc.data().lastName;
+        if (this.user.avatar == null) {
+          this.user.avatar = "assets/images/avatar/25.jpg";
+        }
       }
     });
   }

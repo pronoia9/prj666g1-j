@@ -10,7 +10,25 @@ import * as firebase from 'firebase';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-
+  data: any = {  "toolbarTitle"         : "Register",
+                  "title"               : "Register",
+                  "background"          : "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg",
+                  "username"            : "Enter your username",
+                  "password"            : "Enter your password",
+                  "retypePassword"      : "Enter your password again",
+                  "email"               : "Your e-mail address",
+                  "firstName"           : "Your first name",
+                  "lastName"            : "Your last name",
+                  "register"            : "register",
+                  "labelUsername"       : "USERNAME",
+                  "labelPassword"       : "PASSWORD",
+                  "labelRetypePassword" : "RETYPE PASSWORD",
+                  "labelEmail"          : "E-MAIL",
+                  "labelFirstName"      : "FIRST NAME",
+                  "labelLastName"       : "LAST NAME",
+                  "errorUser"           : "Field can't be empty.",
+                  "errorPassword"       : "Field can't be empty.",
+                  "errorEmail"          : "Invalid email address." }
   user = {} as User;
   password = "";
   retypePwd = "";

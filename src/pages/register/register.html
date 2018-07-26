@@ -1,58 +1,58 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Register</ion-title>
+    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-grid no-padding>
+<ion-content>
+  <ion-grid no-padding *ngIf = "data != null">
     <ion-row center>
       <!--Big Image Header-->
       <!--TODO: figure out how to randomize the image from the folder-->
-      <ion-col no-padding col-12 background-size [ngStyle]="{'background-image': 'url(../../assets/images/background/2.jpg)'}">
+      <ion-col no-padding col-12 background-size [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
         <!--Header Title-->
-        <h1 ion-text register-title text-wrap>Register</h1>
+        <h1 ion-text register-title text-wrap>{{data.title}}</h1>
       </ion-col>
 
       <ion-col form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
         <!--Form-->
         <ion-item>
           <!--Input field username-->
-          <ion-label stacked>Username</ion-label>
-          <ion-input placeholder="username (optional)" [(ngModel)]="user.username" type="text"></ion-input>
+          <ion-label stacked>{{data.labelUsername}}</ion-label>
+          <ion-input placeholder="{{data.username}}" [(ngModel)]="user.username" type="text"></ion-input>
         </ion-item>
 
         <ion-item>
           <!--Input field email-->
-          <ion-label stacked>Email</ion-label>
-          <ion-input required placeholder="email" type="text" [(ngModel)]="user.email"></ion-input>
+          <ion-label stacked>{{data.labelEmail}}</ion-label>
+          <ion-input required placeholder="{{data.email}}" type="text" [(ngModel)]="user.email"></ion-input>
         </ion-item>
 
         <ion-item>
           <!--Input field password-->
-          <ion-label stacked>Password</ion-label>
-          <ion-input required placeholder="password" type="password" [(ngModel)]="password"></ion-input>
+          <ion-label stacked>{{data.labelPassword}}</ion-label>
+          <ion-input required placeholder="{{data.password}}" type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
 
         <ion-item>
           <!--Input field retype password-->
-          <ion-label stacked>Retype Password</ion-label>
-          <ion-input required placeholder="retype password" type="password" [(ngModel)]="retypePwd"></ion-input>
+          <ion-label stacked>{{data.labelRetypePassword}}</ion-label>
+          <ion-input required placeholder="{{data.retypePassword}}" type="password" [(ngModel)]="retypePwd"></ion-input>
         </ion-item>
 
         <ion-item>
           <!--Input field first name-->
-          <ion-label stacked>First Name</ion-label>
-          <ion-input placeholder="first name (optional)" [(ngModel)]="user.firstName" type="text" pattern="[a-zA-Z]"></ion-input>
+          <ion-label stacked>{{data.labelFirstName}}</ion-label>
+          <ion-input placeholder="{{data.firstName}}" [(ngModel)]="user.firstName" type="text" pattern="[a-zA-Z]"></ion-input>
         </ion-item>
 
         <ion-item>
           <!--Input field last name-->
-          <ion-label stacked>Last Name</ion-label>
-          <ion-input placeholder="last name (optional)" [(ngModel)]="user.lastName" type="text" pattern="[a-zA-Z]"></ion-input>
+          <ion-label stacked>{{data.labelLastName}}</ion-label>
+          <ion-input placeholder="{{data.lastName}}" [(ngModel)]="user.lastName" type="text" pattern="[a-zA-Z]"></ion-input>
         </ion-item>
 
         <!--Register button-->
