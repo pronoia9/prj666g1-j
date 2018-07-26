@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, Events } from 'ionic-angular';
+import { Nav, Platform, Events, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -21,14 +21,13 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   isLogged: boolean = false;
-
   rootPage: any = LoginPage;
-
   pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform,
               public statusBar: StatusBar, 
               public splashScreen: SplashScreen,
+              //public navCtrl: NavController,
               public events: Events) {
     this.initializeApp();
 
@@ -87,12 +86,15 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-  appSettings() {
+  profileSettings() {
+    //this.navCtrl.push('ProfilePage');
   }
 
   login() {
+    //this.navCtrl.push('LoginPage');
   }
 
   logout() {
+    //this.navCtrl.push('LogoutPage');
   }
 }
