@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { User } from '../../models/user';
 import * as firebase from 'firebase';
-
-/**
- * Generated class for the FriendListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -19,15 +12,15 @@ export class FriendListPage {
 
   data: any = { "toolbarTitle"  : "Friends",
                 "title"         : "Search for friend",
-                "headerImage"  : "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg",
-                "items" : [] }; // items : [] is for (same as) friendList = []
+                "headerImage"  : "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg" }; 
   user = {} as User;
   searchTerm: any = "";
   allItems: any;
   friendList = [];
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public actionSheetCtrl: ActionSheetController) {
     this.user.uid = firebase.auth().currentUser.uid;
   }
 
@@ -63,5 +56,47 @@ export class FriendListPage {
   }
 
   search(item: any) {
+  }
+
+  presentActionSheet(item, index) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: '',
+      buttons: [
+        {
+          text: 'View Profile',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Send Message',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Delete Friend',
+          role: 'destructive',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Block Friend',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            //
+          }
+        }
+      ]
+    });
+ 
+    actionSheet.present();
   }
 }
