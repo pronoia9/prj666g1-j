@@ -37563,3 +37563,35 @@ page-register ion-row [register-title] {
 page-view-event #map {
   height: 50%;
 }
+
+page-view-event .toolbar-ios {
+  min-height: 64px;
+}
+
+page-view-event .bar-button-default-ios,
+page-view-event .toolbar-title-ios {
+  padding-top: 20px;
+}
+
+page-view-event .sebm-google-map-container {
+  height: 350px;
+}
+
+page-view-event .item-inner {
+  margin-left: 0 !important;
+}
+
+page-view-event [maps-title] {
+  font-weight: bold !important;
+}
+
+page-view-event [span-small] {
+  margin-top: 6px;
+  display: block;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+page-view-event .icon-star::before {
+  margin: 0 !important;
+}

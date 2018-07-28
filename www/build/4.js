@@ -28,7 +28,7 @@ var RegisterPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */]),
             ],
         })
     ], RegisterPageModule);
@@ -66,7 +66,7 @@ var ResetPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__reset__["a" /* ResetPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reset__["a" /* ResetPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reset__["a" /* ResetPage */]),
             ],
         })
     ], ResetPageModule);
@@ -108,7 +108,7 @@ var LoginPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__login__["a" /* LoginPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__login__["a" /* LoginPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__login__["a" /* LoginPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__register_register_module__["RegisterPageModule"],
                 __WEBPACK_IMPORTED_MODULE_3__reset_reset_module__["ResetPageModule"]
             ],
@@ -294,9 +294,9 @@ var RegisterPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-register',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/register/register.html"*/'<ion-header>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid no-padding *ngIf = "data != null">\n    <ion-row center>\n      <!--Big Image Header-->\n      <!--TODO: figure out how to randomize the image from the folder-->\n      <ion-col no-padding col-12 background-size [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n        <!--Header Title-->\n        <h1 ion-text register-title text-wrap>{{data.title}}</h1>\n      </ion-col>\n\n      <ion-col form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <!--Form-->\n        <ion-item>\n          <!--Input field username-->\n          <ion-label stacked>{{data.labelUsername}}</ion-label>\n          <ion-input placeholder="{{data.username}}" [(ngModel)]="user.username" type="text"></ion-input>\n        </ion-item>\n\n        <ion-item>\n          <!--Input field email-->\n          <ion-label stacked>{{data.labelEmail}}</ion-label>\n          <ion-input required placeholder="{{data.email}}" type="text" [(ngModel)]="user.email"></ion-input>\n        </ion-item>\n\n        <ion-item>\n          <!--Input field password-->\n          <ion-label stacked>{{data.labelPassword}}</ion-label>\n          <ion-input required placeholder="{{data.password}}" type="password" [(ngModel)]="password"></ion-input>\n        </ion-item>\n\n        <ion-item>\n          <!--Input field retype password-->\n          <ion-label stacked>{{data.labelRetypePassword}}</ion-label>\n          <ion-input required placeholder="{{data.retypePassword}}" type="password" [(ngModel)]="retypePwd"></ion-input>\n        </ion-item>\n\n        <ion-item>\n          <!--Input field first name-->\n          <ion-label stacked>{{data.labelFirstName}}</ion-label>\n          <ion-input placeholder="{{data.firstName}}" [(ngModel)]="user.firstName" type="text" pattern="[a-zA-Z]"></ion-input>\n        </ion-item>\n\n        <ion-item>\n          <!--Input field last name-->\n          <ion-label stacked>{{data.labelLastName}}</ion-label>\n          <ion-input placeholder="{{data.lastName}}" [(ngModel)]="user.lastName" type="text" pattern="[a-zA-Z]"></ion-input>\n        </ion-item>\n\n        <!--Register button-->\n        <button ion-button float-right clear button-clear text-capitalize (click)="register(user)">Register</button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/register/register.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
     ], RegisterPage);
     return RegisterPage;
 }());
@@ -355,7 +355,7 @@ var ResetPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-reset',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/reset/reset.html"*/'<!--\n  Generated template for the ResetPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Reset Your Password</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <h6>Please enter the email you registered</h6>\n\n  <ion-item>\n    <ion-label floating>Email</ion-label>\n      <ion-input type = "email" [(ngModel)]="email"></ion-input>\n  </ion-item>\n\n  <button ion-button (click) = "resetPassword()">Reset Password</button>\n\n\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/reset/reset.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], ResetPage);
     return ResetPage;
 }());

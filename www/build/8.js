@@ -27,7 +27,7 @@ var ViewEventParticipantsPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__view_event_participants__["a" /* ViewEventParticipantsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__view_event_participants__["a" /* ViewEventParticipantsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__view_event_participants__["a" /* ViewEventParticipantsPage */]),
             ],
         })
     ], ViewEventParticipantsPageModule);
@@ -93,8 +93,8 @@ var ViewEventParticipantsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-view-event-participants',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event-participants/view-event-participants.html"*/'<!--\n  Generated template for the ViewEventParticipantsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Participants</ion-title>\n  </ion-navbar>\n\n</ion-header>\n \n<ion-content padding>\n\n  <ion-list>\n    <ion-item *ngFor="let p of participants">\n      <ion-icon ios="ios-person" md="md-person"></ion-icon>\n        {{p.username}}\n        <p>{{p.email}}</p>\n    </ion-item>\n  </ion-list>\n    \n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event-participants/view-event-participants.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], ViewEventParticipantsPage);
     return ViewEventParticipantsPage;
 }());

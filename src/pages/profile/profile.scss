@@ -1,5 +1,5 @@
 page-profile {
-    @include settingAnimationHeader;
+  @include settingAnimationHeader;
   @-webkit-keyframes color-change {
     0% {
       color: theme-colors('mainColors', 'primary');

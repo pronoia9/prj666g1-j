@@ -15,6 +15,7 @@ declare var google: any;
   templateUrl: 'view-event.html',
 })
 export class ViewEventPage {
+  data: any = { "toolbarTitle" : "View Event" };
   user = {} as User;
   event = {} as Event;
   eventRef: any;
