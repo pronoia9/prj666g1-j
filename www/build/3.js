@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(761);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(762);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -46,7 +46,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditEventPageModule", function() { return EditEventPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_event__ = __webpack_require__(762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_event__ = __webpack_require__(763);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -84,7 +84,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewEventParticipantsPageModule", function() { return ViewEventParticipantsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_event_participants__ = __webpack_require__(763);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_event_participants__ = __webpack_require__(764);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -122,7 +122,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewEventPageModule", function() { return ViewEventPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_event__ = __webpack_require__(773);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_event__ = __webpack_require__(774);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__edit_event_edit_event_module__ = __webpack_require__(740);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__chat_chat_module__ = __webpack_require__(739);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_event_participants_view_event_participants_module__ = __webpack_require__(741);
@@ -161,7 +161,7 @@ var ViewEventPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 761:
+/***/ 762:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -253,7 +253,7 @@ var ChatPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 762:
+/***/ 763:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -412,7 +412,7 @@ var EditEventPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 763:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -477,7 +477,7 @@ var ViewEventParticipantsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 773:
+/***/ 774:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

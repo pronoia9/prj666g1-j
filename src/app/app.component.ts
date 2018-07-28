@@ -10,6 +10,7 @@ import { FriendListPage } from '../pages/friend-list/friend-list';
 import { LoginPage } from '../pages/login/login';
 import { LogoutPage } from '../pages/logout/logout';
 import { ProfilePage } from '../pages/profile/profile';
+//import { AvatarsPage } from '../pages/avatars/avatars';
 
 // Import plugins
 import firebase from 'firebase';
@@ -46,6 +47,7 @@ export class MyApp {
           { title: 'My Event', component: ManageEventPage, icon: 'calendar' },
           { title: 'My Friends', component: FriendListPage, icon: 'people' },
           { title: 'My Profile', component: ProfilePage, icon: 'person' },
+          //{ title: 'Avatars', component: AvatarsPage, icon: 'people' },
           { title: 'Logout', component: LogoutPage, icon: 'exit' }
           //{ title: 'Register', component: RegisterPage}
         ];

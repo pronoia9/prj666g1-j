@@ -54,3 +54,9 @@ ion-header {
 [main-menu] .item-inner {
     margin-left: 6px !important;
 }
+
+// To remove the scrollbar
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+}
