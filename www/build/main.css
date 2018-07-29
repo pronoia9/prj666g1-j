@@ -37659,3 +37659,141 @@ page-view-event [span-small] {
 page-view-event .icon-star::before {
   margin: 0 !important;
 }
+
+@keyframes headerOff {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+page-view-event-participants ion-navbar {
+  background-color: transparent;
+  -webkit-animation-name: headerOff;
+  animation-name: headerOff;
+  -webkit-animation-duration: 100ms;
+  animation-duration: 100ms;
+}
+
+@keyframes headerOn {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+page-view-event-participants .active {
+  background-color: white !important;
+  -webkit-animation-name: headerOn;
+  animation-name: headerOn;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #21e7b6 !important;
+  }
+}
+
+page-view-event-participants .toolbar-ios {
+  min-height: 64px;
+}
+
+page-view-event-participants .bar-button-default-ios,
+page-view-event-participants .toolbar-title-ios {
+  padding-top: 20px;
+}
+
+page-view-event-participants .content-ios .scroll-content {
+  top: -64px !important;
+}
+
+page-view-event-participants .active .back-button,
+page-view-event-participants .active .toolbar-title {
+  color: #21e7b6 !important;
+  -webkit-animation-name: color-change;
+  animation-name: color-change;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+}
+
+page-view-event-participants .back-button,
+page-view-event-participants .toolbar-title {
+  color: white !important;
+}
+
+page-view-event-participants .scroll-content {
+  top: -56px !important;
+}
+
+page-view-event-participants [background-size] {
+  background-color: #00ff36 !important;
+  background-blend-mode: multiply;
+  height: 250px;
+  position: relative;
+}
+
+page-view-event-participants [background-size]::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00ff36;
+  mix-blend-mode: multiply;
+}
+
+page-view-event-participants [background-size]::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #23278a;
+  mix-blend-mode: lighten;
+}
+
+page-view-event-participants [background-size] [parallax-header] {
+  color: white;
+  z-index: 9999;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+}
+
+page-view-event-participants [background-size] [parallax-subtitle] {
+  color: white;
+}
+
+page-view-event-participants ion-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+}
+
+page-view-event-participants ion-thumbnail {
+  opacity: 0.7;
+  -webkit-filter: none;
+  filter: none;
+}
+
+page-view-event-participants ion-thumbnail img {
+  border-radius: 8px !important;
+}
+
+page-view-event-participants .input-wrapper {
+  display: block;
+}

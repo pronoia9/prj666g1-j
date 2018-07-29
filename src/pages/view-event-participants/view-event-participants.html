@@ -1,25 +1,36 @@
-<!--
-  Generated template for the ViewEventParticipantsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Participants</ion-title>
+<ion-header header-ios>
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->
   </ion-navbar>
-
 </ion-header>
- 
-<ion-content padding>
 
-  <ion-list>
-    <ion-item *ngFor="let p of participants">
-      <ion-icon ios="ios-person" md="md-person"></ion-icon>
-        {{p.username}}
-        <p>{{p.email}}</p>
-    </ion-item>
-  </ion-list>
-    
+<ion-content elastic-header>
+  <div background-size id="elastic-header" [ngStyle]="{'background-image': 'url(' + data.headerImage + ')'}">
+    <div parallax-header *ngIf="data != null">
+      <h2 no-margin parallax-subtitle>{{data.title}}</h2>
+      <h2 no-margin parallax-title>{{data.subtitle}}</h2>
+    </div>
+  </div>
+
+  <!--Content-->
+  <ion-grid no-padding>
+    <ion-row *ngIf="data != null">
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ion-item item-bcg border no-lines *ngFor="let p of participants">
+            <!--Participant Info-->
+            <ion-thumbnail item-start><img [src]="p.avatar"></ion-thumbnail>
+            <h2 no-margin item-title>{{p.username}}</h2>
+            <h3 item-subtitle text-wrap>{{p.firstName}} {{p.lastName}}</h3>
+            <h3 item-subtitle text-wrap>{{p.email}}</h3>
+            <!--More Badge-->
+            <ion-badge badge-light item-end (click)="presentActionSheet(p)">{{data.button}}</ion-badge>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

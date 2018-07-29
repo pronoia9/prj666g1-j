@@ -1,15 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { User } from '../../models/user';
 import * as firebase from 'firebase';
 import { callUserCallback } from '@firebase/database/dist/src/core/util/util';
-
-/**
- * Generated class for the ViewEventParticipantsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -18,10 +11,18 @@ import { callUserCallback } from '@firebase/database/dist/src/core/util/util';
 })
 export class ViewEventParticipantsPage {
 
+  data: any = {
+    "toolbarTitle" : "View Participants",
+    "headerImage" : "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg",
+    "title" : "All Event Participants of",
+    "subtitle" : "Event Name",
+    "button" : "...",
+  };
   participants= [];
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public actionSheetCtrl: ActionSheetController) {
   }
 
   getParticipants(pRef){
@@ -30,6 +31,9 @@ export class ViewEventParticipantsPage {
         let p = {} as User;
         p.email = doc.data().email;
         p.username = doc.data().username;
+        p.firstName = doc.data().firstName;
+        p.lastName = doc.data().lastName;
+        p.avatar = doc.data().avatar;
         this.participants.push(p);
       });
     });
@@ -45,5 +49,54 @@ export class ViewEventParticipantsPage {
     this.navParams.data.forEach((p) => {
       p.onSnapshot(()=>{});
     })
+  }
+
+  presentActionSheet(item) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: '',
+      buttons: [
+        {
+          text: 'View Profile',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Send Message',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: '(if not friends) Add Friend',
+          role: 'destructive',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: '(if already friends) Delete Friend',
+          role: 'destructive',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Block User',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            //
+          }
+        }
+      ]
+    });
+ 
+    actionSheet.present();
   }
 }
