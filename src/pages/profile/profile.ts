@@ -49,9 +49,7 @@ export class ProfilePage {
         this.user.username = doc.data().username;
         this.user.firstName = doc.data().firstName;
         this.user.lastName = doc.data().lastName;
-        if (this.user.avatar == null) {
-          this.user.avatar = "assets/images/avatar/25.jpg";
-        }
+        this.user.avatar = doc.data().avatar;
       }
     });
   }

@@ -116,9 +116,7 @@ var FriendListPage = /** @class */ (function () {
                     f.lastName = friend.data().lastName;
                     f.username = friend.data().username;
                     f.email = friend.data().email;
-                    if (f.avatar == null || f.avatar == "") {
-                        f.avatar = "assets/images/avatar/25.jpg";
-                    }
+                    f.avatar = friend.data().avatar;
                     _this.friendList.push(f);
                 });
             });
@@ -583,9 +581,7 @@ var ProfilePage = /** @class */ (function () {
                 _this.user.username = doc.data().username;
                 _this.user.firstName = doc.data().firstName;
                 _this.user.lastName = doc.data().lastName;
-                if (_this.user.avatar == null) {
-                    _this.user.avatar = "assets/images/avatar/25.jpg";
-                }
+                _this.user.avatar = doc.data().avatar;
             }
         });
     };
@@ -650,7 +646,7 @@ var map = {
 		7
 	],
 	"../pages/avatars/avatars.module": [
-		749,
+		750,
 		16
 	],
 	"../pages/chat/chat.module": [
@@ -658,7 +654,7 @@ var map = {
 		15
 	],
 	"../pages/create-event/create-event.module": [
-		750,
+		749,
 		14
 	],
 	"../pages/edit-event/edit-event.module": [
@@ -869,11 +865,11 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/add-friend/add-friend.module#AddFriendPageModule', name: 'AddFriendPage', segment: 'add-friend', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/avatars/avatars.module#AvatarsPageModule', name: 'AvatarsPage', segment: 'avatars', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/create-event/create-event.module#CreateEventPageModule', name: 'CreateEventPage', segment: 'create-event', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-event/edit-event.module#EditEventPageModule', name: 'EditEventPage', segment: 'edit-event', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/avatars/avatars.module#AvatarsPageModule', name: 'AvatarsPage', segment: 'avatars', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/friend-list/friend-list.module#FriendListPageModule', name: 'FriendListPage', segment: 'friend-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/join-event/join-event.module#JoinEventPageModule', name: 'JoinEventPage', segment: 'join-event', priority: 'low', defaultHistory: [] },
@@ -968,6 +964,13 @@ var MyApp = /** @class */ (function () {
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
         this.events = events;
+        this.data = {
+            "toolbarTitle": "Menu",
+            "background": "assets/images/images/" + Math.ceil(Math.random() * 17) + ".jpg",
+            "image": "assets/images/logo/1.png",
+            "title": "MeeTogether",
+            "description": "Please login to consectetur elit, sed do euismod tempor incididunt",
+        };
         this.isLogged = false;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */];
         this.initializeApp();
@@ -980,6 +983,10 @@ var MyApp = /** @class */ (function () {
         // using events subscribe to track login/out status
         events.subscribe('login_status', function (isLogin, user) {
             if (isLogin && user != null) {
+                _this.isLogged = true;
+                _this.data.image = user.avatar;
+                _this.data.title = user.username;
+                _this.data.description = user.firstName + " " + user.lastName;
                 _this.pages = [
                     { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */], icon: 'home' },
                     { title: 'My Event', component: __WEBPACK_IMPORTED_MODULE_5__pages_manage_event_manage_event__["a" /* ManageEventPage */], icon: 'calendar' },
@@ -989,14 +996,13 @@ var MyApp = /** @class */ (function () {
                     { title: 'Logout', component: __WEBPACK_IMPORTED_MODULE_8__pages_logout_logout__["a" /* LogoutPage */], icon: 'exit' }
                     //{ title: 'Register', component: RegisterPage}
                 ];
-                _this.isLogged = true;
             }
             else {
+                _this.isLogged = false;
                 _this.pages = [
                     { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */], icon: 'home' },
                     { title: 'Login', component: __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */], icon: 'log-in' }
                 ];
-                _this.isLogged = false;
             }
         });
         /*
@@ -1038,7 +1044,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <div header-background-image padding [ngStyle]="{\'background-image\': \'url(../../assets/images/avatar/25.jpg)\'}">\n    </div>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon ios="ios-{{p.icon}}" md="md-{{p.icon}}"></ion-icon>{{p.title}}\n      </button>\n      <button ion-button clear *ngIf = "isLogged == true" (click)="profileSettings()"><ion-icon name="cog">Settings</ion-icon></button>\n      <button ion-button clear *ngIf = "isLogged == true" (click)="logout()"><ion-icon name="exit">Logout</ion-icon></button>\n      <button ion-button clear *ngIf = "isLogged == false" (click)="login()"><ion-icon name="exit">Login</ion-icon></button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <div header-background-image padding [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n      <ion-thumbnail>\n        <img *ngIf="isLogged == false" src="{{data.image}}">\n        <img *ngIf="isLogged == true" src="{{data.image}}" class="logged">\n      </ion-thumbnail>\n      <h2 ion-text header-title>{{data.title}}</h2>\n      <p>{{data.description}}</p>\n    </div>\n  </ion-header>\n\n  <ion-content class="masters">\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon ios="ios-{{p.icon}}" md="md-{{p.icon}}"></ion-icon>{{p.title}}\n      </button>\n\n      <button ion-button clear *ngIf="isLogged == true" (click)="profileSettings()">\n        <ion-icon name="cog">Settings</ion-icon>\n      </button>\n\n      <button ion-button item-end float-right clear *ngIf="isLogged == true" (click)="logout()">\n        <ion-icon name="exit">Logout</ion-icon>\n      </button>\n      <button ion-button item-end float-right clear *ngIf="isLogged == false" (click)="login()">\n        <ion-icon name="exit">Login</ion-icon>\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],

@@ -37,6 +37,7 @@ export class RegisterPage {
               public navParams: NavParams,
               private toastCtrl: ToastController) {
     this.user = {
+      avatar: "assets/images/avatar/25.jpg",
       email: "",
       username: "",
       firstName: "",

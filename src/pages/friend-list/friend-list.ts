@@ -42,9 +42,7 @@ export class FriendListPage {
           f.lastName = friend.data().lastName;
           f.username = friend.data().username;
           f.email = friend.data().email;
-          if (f.avatar == null || f.avatar == "") {
-            f.avatar = "assets/images/avatar/25.jpg";
-          }
+          f.avatar = friend.data().avatar;
           this.friendList.push(f);
         });
       });

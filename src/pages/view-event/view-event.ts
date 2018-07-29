@@ -1,5 +1,5 @@
 import { Component,ElementRef,ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams,Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,Platform, ActionSheetController  } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMaps, GoogleMap, GoogleMapsEvent, CameraPosition, GoogleMapOptions, Marker, Circle, MarkerOptions, LatLng} from '@ionic-native/google-maps';
@@ -15,7 +15,9 @@ declare var google: any;
   templateUrl: 'view-event.html',
 })
 export class ViewEventPage {
-  data: any = { "toolbarTitle" : "View Event" };
+  data: any = { "toolbarTitle" : "View Event",
+                "participants" : 0,
+                "description" : "Description", };
   user = {} as User;
   event = {} as Event;
   eventRef: any;
@@ -30,7 +32,8 @@ export class ViewEventPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public afAuth: AngularFireAuth,
-              public platform:Platform) {
+              public platform:Platform,
+              public actionSheetCtrl: ActionSheetController) {
     this.user.uid = afAuth.auth.currentUser.uid;
     this.event.eventId = navParams.data;
     this.initialEmptyEvent();
@@ -158,11 +161,12 @@ export class ViewEventPage {
       this.event.participants.splice(index,1);
       this.eventRef.update('participants',this.event.participants);
     }
-    var index = this.event.admins.indexOf(
+    // index was a duplicate value
+    var indexA = this.event.admins.indexOf(
       this.event.admins.find((p)=>{return p.isEqual(userRef);})
     );
-    if (index > -1){
-      this.event.admins.splice(index,1);
+    if (indexA > -1){
+      this.event.admins.splice(indexA,1);
       this.eventRef.update('admins',this.event.admins);
     }
 
@@ -205,5 +209,54 @@ export class ViewEventPage {
   
   private deg2rad(deg) {
     return deg * (Math.PI/180);
+  }
+
+  presentActionSheet(user, event) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: '',
+      buttons: [
+        {
+          // if user is in event.admin?
+          text: 'Edit Event',
+          handler: () => {
+            this.navCtrl.push('EditEventPage', this.event);
+          }
+        },
+        {
+          text: 'Event Settings',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Group Chat',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'View Participants',
+          handler: () => {
+            this.navCtrl.push('ViewEventParticipantsPage', this.event.participants);
+          }
+        },
+        {
+          text: 'Leave Event',
+          role: 'destructive',
+          handler: () => {
+            //
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            //
+          }
+        }
+      ]
+    });
+ 
+    actionSheet.present();
   }
 }

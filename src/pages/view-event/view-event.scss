@@ -1,4 +1,16 @@
 page-view-event {
+  @include settingAnimationHeader;
+  @-webkit-keyframes color-change {
+    0% {
+      color: theme-colors('mainColors', 'primary');
+    }
+
+    100% {
+      color: theme-colors('textColors', 'accent') !important;
+    }
+  }
+
+
    #map {
         height: 50%;
    }

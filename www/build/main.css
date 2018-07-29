@@ -37062,6 +37062,10 @@ ion-header [class^="icon-"]:before, ion-header [class*=" icon-"]:before {
   display: none;
 }
 
+.masters {
+  color: white;
+}
+
 page-avatars ion-card {
   position: relative;
   height: 120px;
@@ -37573,6 +37577,51 @@ page-register ion-row [register-title] {
   bottom: 10px;
   left: 25px;
   z-index: 999;
+}
+
+@keyframes headerOff {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+page-view-event ion-navbar {
+  background-color: transparent;
+  -webkit-animation-name: headerOff;
+  animation-name: headerOff;
+  -webkit-animation-duration: 100ms;
+  animation-duration: 100ms;
+}
+
+@keyframes headerOn {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+page-view-event .active {
+  background-color: white !important;
+  -webkit-animation-name: headerOn;
+  animation-name: headerOn;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #21e7b6 !important;
+  }
 }
 
 page-view-event #map {

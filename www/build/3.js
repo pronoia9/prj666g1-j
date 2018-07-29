@@ -503,12 +503,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ViewEventPage = /** @class */ (function () {
-    function ViewEventPage(navCtrl, navParams, afAuth, platform) {
+    function ViewEventPage(navCtrl, navParams, afAuth, platform, actionSheetCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.afAuth = afAuth;
         this.platform = platform;
-        this.data = { "toolbarTitle": "View Event" };
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.data = { "toolbarTitle": "View Event",
+            "participants": 0,
+            "description": "Description", };
         this.user = {};
         this.event = {};
         this.marker = {};
@@ -632,9 +635,10 @@ var ViewEventPage = /** @class */ (function () {
             this.event.participants.splice(index, 1);
             this.eventRef.update('participants', this.event.participants);
         }
-        var index = this.event.admins.indexOf(this.event.admins.find(function (p) { return p.isEqual(userRef); }));
-        if (index > -1) {
-            this.event.admins.splice(index, 1);
+        // index was a duplicate value
+        var indexA = this.event.admins.indexOf(this.event.admins.find(function (p) { return p.isEqual(userRef); }));
+        if (indexA > -1) {
+            this.event.admins.splice(indexA, 1);
             this.eventRef.update('admins', this.event.admins);
         }
         //delete event
@@ -671,18 +675,67 @@ var ViewEventPage = /** @class */ (function () {
     ViewEventPage.prototype.deg2rad = function (deg) {
         return deg * (Math.PI / 180);
     };
+    ViewEventPage.prototype.presentActionSheet = function (user, event) {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: '',
+            buttons: [
+                {
+                    // if user is in event.admin?
+                    text: 'Edit Event',
+                    handler: function () {
+                        _this.navCtrl.push('EditEventPage', _this.event);
+                    }
+                },
+                {
+                    text: 'Event Settings',
+                    handler: function () {
+                        //
+                    }
+                },
+                {
+                    text: 'Group Chat',
+                    handler: function () {
+                        //
+                    }
+                },
+                {
+                    text: 'View Participants',
+                    handler: function () {
+                        _this.navCtrl.push('ViewEventParticipantsPage', _this.event.participants);
+                    }
+                },
+                {
+                    text: 'Leave Event',
+                    role: 'destructive',
+                    handler: function () {
+                        //
+                    }
+                },
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        //
+                    }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], ViewEventPage.prototype, "mapElement", void 0);
     ViewEventPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-view-event',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event/view-event.html"*/'<ion-header>\n    <ion-navbar transparent>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <!--<ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>-->\n    </ion-navbar>\n</ion-header>\n\n<!--Content -->\n<ion-content padding>\n  <div id="elastic-header"><div #map id="map"></div></div>\n  \n <ion-list>\n    <ion-item>\n      <h6>Event Name</h6>\n      {{event.eventName}}\n    </ion-item>\n\n    <ion-item>\n      <h6>Description</h6>\n      {{event.description}}\n    </ion-item>\n\n    <ion-item>\n      <h6>Date</h6>\n      {{event.date | date:\'yyyy MMM dd H:mm\'}}\n    </ion-item>\n  </ion-list>\n  \n\n  <!-- Buttons -->\n  <button ion-button clear block (click)="groupChatBtn()">Group Message</button>\n\n  <button ion-button clear block (click)="viewParticipants()">Participants</button>\n\n  <button ion-button block *ngIf="isAdmin" (click)="editEventBtn()">Edit Event</button>\n  <button ion-button block (click)="leaveEventBtn()">Leave Event</button>\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event/view-event.html"*/,
+            selector: 'page-view-event',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event/view-event.html"*/'<ion-header>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>-->\n    <ion-title *ngIf="data != null">{{event.eventName}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<!--Content -->\n<ion-content padding>\n  <div id="elastic-header">\n    <div #map id="map"></div>\n  </div>\n  <div #map id="map"></div>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12 map-header>\n        <ion-item lines no-padding>\n          <!--Event Title/Name-->\n          <ion-item-divider border no-lines>\n            <h1 padding-left maps-title margin-top text-wrap>{{event.eventName}}</h1>\n            <!--<ion-icon no-padding item-end (click)="presentActionSheet()" icon-medium ios="ios-more" md="md-more"></ion-icon>-->\n            <button padding-top text-capitalize button-clear ion-button item-end clear (click)="presentActionSheet(user, event)"><ion-icon name="more"></ion-icon></button>\n          </ion-item-divider>\n          <!--Event Info-->\n          <div padding-left padding-top>\n              <h2 ion-text float-left color="primary"> Participants: ###</h2><!--{{event.participants.length}}-->\n              <!--<ion-icon no-padding no-margin no-border icon-small ios="ios-people" md="md-people" (click)="viewParticipants()" item-start></ion-icon>-->\n          </div>\n        </ion-item>\n      </ion-col>\n\n      <ion-col col-12 map-content transparent>\n        <ion-item-group>\n          <ion-item-divider no-lines>\n            <h2 maps-description-title text-wrap margin-bottom>{{data.description}}</h2>\n            <p maps-description text-wrap>{{event.description}}</p>\n          </ion-item-divider>\n          <!--Info Location-->\n          <ion-item border>\n            <ion-icon icon-medium ion-text color="primary" ios="ios-locate" md="md-locate" item-start></ion-icon>\n            <h2 no-padding>{{event.location}}</h2>\n          </ion-item>\n          <!--Info Time-->\n          <ion-item border>\n            <ion-icon icon-medium color="primary" ios="ios-timer" md="md-timer" item-start></ion-icon>\n            <h2 no-padding>{{event.date | date:\'yyyy MMM dd H:mm\'}}</h2>\n          </ion-item>\n          <!--Info Creator-->\n          <ion-item border>\n            <ion-icon icon-medium color="primary" ios="ios-person" md="md-person" item-start></ion-icon>\n            <h2 no-padding>Created by {{event.creator}}</h2>\n          </ion-item>\n          <!--Info Chat-->\n          <ion-item border>\n            <button button-clear clear ion-button (click)="groupChatBtn()" no-padding>\n              <ion-icon icon-medium color="primary" ios="ios-chatbubbles" md="md-chatbubbles" item-start></ion-icon>\n              <h2 no-padding>Group Chat</h2>\n            </button>\n          </ion-item>\n          <!--Info Participants-->\n          <ion-item border>\n            <button button-clear clear ion-button (click)="viewParticipants()" no-padding>\n              <ion-icon icon-medium color="primary" ios="ios-people" md="md-people" item-start></ion-icon>\n              <h2 no-padding>View Participants</h2>\n            </button>\n          </ion-item>\n          <!--Leave Event-->\n          <ion-item border>\n            <button button-clear color="danger" clear ion-button (click)="leaveEventBtn()" no-padding>\n              <ion-icon icon-medium color="primary" ios="ios-exit" md="md-exit" item-start></ion-icon>\n              <h2 no-padding>Leave Event</h2>\n            </button>\n          </ion-item>\n        </ion-item-group>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event/view-event.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], ViewEventPage);
     return ViewEventPage;
 }());

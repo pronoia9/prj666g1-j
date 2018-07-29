@@ -14,6 +14,7 @@ import { ProfilePage } from '../pages/profile/profile';
 
 // Import plugins
 import firebase from 'firebase';
+import { User } from '../models/user'; ////////////////////////////////////////
 
 @Component({
   templateUrl: 'app.html'
@@ -21,15 +22,22 @@ import firebase from 'firebase';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  data: any = {
+    "toolbarTitle": "Menu",
+    "background": "assets/images/images/" + Math.ceil(Math.random() * 17) + ".jpg",
+    "image": "assets/images/logo/1.png",
+    "title": "MeeTogether",
+    "description": "Please login to consectetur elit, sed do euismod tempor incididunt",
+  }
   isLogged: boolean = false;
   rootPage: any = LoginPage;
-  pages: Array<{title: string, component: any, icon: string}>;
+  pages: Array<{ title: string, component: any, icon: string }>;
 
   constructor(public platform: Platform,
-              public statusBar: StatusBar, 
-              public splashScreen: SplashScreen,
-              //public navCtrl: NavController,
-              public events: Events) {
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    //public navCtrl: NavController,
+    public events: Events) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -42,6 +50,16 @@ export class MyApp {
     // using events subscribe to track login/out status
     events.subscribe('login_status', (isLogin, user) => {
       if (isLogin && user != null) {
+        this.isLogged = true;
+        this.data.image = user.avatar;
+        this.data.title = user.username; 
+        this.data.description = user.firstName + " " + user.lastName; 
+        
+        // TODO: NEED TO RETRIEVE THE DATA "CORRECTLY" ABOVE 
+        this.data.image = "assets/images/avatars/20.jpg";
+        this.data.title = "BoredPanda"; 
+        this.data.description = "Jay Ansin"; 
+
         this.pages = [
           { title: 'Home', component: HomePage, icon: 'home' },
           { title: 'My Event', component: ManageEventPage, icon: 'calendar' },
@@ -51,14 +69,13 @@ export class MyApp {
           { title: 'Logout', component: LogoutPage, icon: 'exit' }
           //{ title: 'Register', component: RegisterPage}
         ];
-        this.isLogged = true;
       }
       else {
+        this.isLogged = false;
         this.pages = [
           { title: 'Home', component: HomePage, icon: 'home' },
           { title: 'Login', component: LoginPage, icon: 'log-in' }
         ];
-        this.isLogged = false;
       }
     })
     /*

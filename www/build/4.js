@@ -205,6 +205,7 @@ var RegisterPage = /** @class */ (function () {
         this.password = "";
         this.retypePwd = "";
         this.user = {
+            avatar: "assets/images/avatar/25.jpg",
             email: "",
             username: "",
             firstName: "",
