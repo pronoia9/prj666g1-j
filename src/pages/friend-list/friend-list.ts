@@ -12,11 +12,16 @@ export class FriendListPage {
 
   data: any = { "toolbarTitle"  : "Friends",
                 "title"         : "Search for friend",
-                "headerImage"  : "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg" }; 
+                "headerImage"  : "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg", }; 
   user = {} as User;
   searchTerm: any = "";
   allItems: any;
   friendList = [];
+  // Tabs
+  //Friends = FriendListPage;
+  //Pending = FriendListPage;
+  //Blocked = FriendListPage;
+  //Add = AddFriendPage;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -49,7 +54,7 @@ export class FriendListPage {
     });
   }
 
-  addFriend(){
+  addFriend() {
     this.navCtrl.push('AddFriendPage',this.user);
   }
 
@@ -96,5 +101,8 @@ export class FriendListPage {
     });
  
     actionSheet.present();
+  }
+
+  editFriends() {
   }
 }

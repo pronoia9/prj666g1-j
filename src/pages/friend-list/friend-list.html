@@ -1,34 +1,47 @@
 <ion-header header-ios>
-    <ion-navbar transparent>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->
-    </ion-navbar>
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->
+  </ion-navbar>
 
-    <ion-toolbar no-padding>
-        <div background-size *ngIf="data != null" [ngStyle]="{'background-image': 'url(' + data.headerImage + ')'}">
-          <div search-bar-bcg>
-            <!-- Header Title -->
-            <h1 ion-text no-margin padding-left search-bar-title>{{data.title}}</h1>
-            <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="search(searchTerm)"></ion-searchbar>
-          </div>
-        </div>
-      </ion-toolbar>    
+  <ion-toolbar no-padding>
+    <div background-size *ngIf="data != null" [ngStyle]="{'background-image': 'url(' + data.headerImage + ')'}">
+      <div search-bar-bcg>
+        <!-- Header Title -->
+        <h1 ion-text no-margin padding-left search-bar-title>{{data.title}}</h1>
+        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="search(searchTerm)"></ion-searchbar>
+      </div>
+    </div>
+  </ion-toolbar>
 </ion-header>
 
 
 <!-- Content -->
 <ion-content elastic-header>
-    <ion-list *ngIf="friendList != null">
-      <ion-item border no-lines *ngFor="let friend of friendList; let i = index">
-        <ion-avatar item-start>
-          <img [src]="friend.avatar"/>
-        </ion-avatar>
-        <h2 item-title>{{friend.firstName}} {{friend.lastName}}</h2>
-        <h3 item-subtitle text-wrap>{{friend.username}}</h3>
-        <!-- Action Sheet Button-->
-        <button text-capitalize button-clear ion-button item-end clear (click)="presentActionSheet()"><ion-icon name="more"></ion-icon></button>
-      </ion-item>
-    </ion-list>
+  <ion-list *ngIf="friendList != null">
+    <ion-item border no-lines *ngFor="let friend of friendList; let i = index">
+      <ion-avatar item-start>
+        <img [src]="friend.avatar" />
+      </ion-avatar>
+      <h2 item-title>{{friend.firstName}} {{friend.lastName}}</h2>
+      <h3 item-subtitle text-wrap>{{friend.username}}</h3>
+      <!-- Action Sheet Button -->
+      <button text-capitalize button-clear ion-button item-end clear (click)="presentActionSheet()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<!-- Bottom Button -->
+<ion-footer transparent>
+  <ion-fab bottom right>
+    <button ion-fab>...</button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="addFriend()">+</button>
+      <button ion-fab (click)="editFriends()">=</button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-footer>
