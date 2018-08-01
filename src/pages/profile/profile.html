@@ -7,15 +7,13 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content elastic-header>
-
     <div padding background-size id="elastic-header" [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
     <ion-thumbnail *ngIf="user != null">
       <img [src]="user.avatar" />
     </ion-thumbnail>
-    <h2 text-center parallax-title *ngIf="user != null">{{user.firstName}} {{user.lastName}}</h2>
-    <h3 text-center parallax-subtitle *ngIf="user != null">{{user.username}}</h3>
+    <h2 text-center parallax-title *ngIf="user != null">{{user.username}}</h2>
+    <h3 text-center parallax-subtitle *ngIf="user != null">{{user.firstName}} {{user.lastName}}</h3>
   </div>
 
   <ion-item (click)="getQr()">
