@@ -9,10 +9,7 @@
 </ion-header>
 
 <!--Content -->
-<ion-content padding>
-  <div id="elastic-header">
-    <div #map id="map"></div>
-  </div>
+<ion-content elastic-header>
   <div #map id="map"></div>
   <ion-grid no-padding *ngIf="data != null">
     <ion-row>
@@ -20,7 +17,7 @@
         <ion-item lines no-padding>
           <!--Event Title/Name-->
           <ion-item-divider border no-lines>
-            <h1 padding-left maps-title margin-top text-wrap>{{event.eventName}}</h1>
+            <h1 no-padding padding-left maps-title margin-top text-wrap>{{event.eventName}}</h1>
             <!--<ion-icon no-padding item-end (click)="presentActionSheet()" icon-medium ios="ios-more" md="md-more"></ion-icon>-->
             <button padding-top text-capitalize button-clear ion-button item-end clear (click)="presentActionSheet(user, event)"><ion-icon name="more"></ion-icon></button>
           </ion-item-divider>
