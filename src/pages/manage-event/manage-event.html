@@ -1,20 +1,41 @@
-<ion-header>
-  <ion-navbar>
+<ion-header header-ios>
+  <ion-navbar transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Manage Event</ion-title>
+    <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->
   </ion-navbar>
+
+  <!-- Search bar -->
+  <ion-toolbar no-padding>
+    <div background-size *ngIf="data != null" [ngStyle]="{'background-image': 'url(' + data.headerImage + ')'}">
+      <div search-bar-bcg>
+        <!-- Header Title -->
+        <h1 ion-text no-margin padding-left search-bar-title>{{data.title}}</h1>
+        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="search(searchTerm)"></ion-searchbar>
+      </div>
+    </div>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <ion-item *ngFor="let e of events" outline (click)="viewEvent(e.eventId)">
-      <ion-icon ios="ios-calendar" md="md-calendar"></ion-icon>
-      {{e.eventName}}
-      <p>{{e.date | date:'yyyy MMM dd H:mm'}}</p>
-    </ion-item>
-  </ion-list>
+<ion-content elastic-header>
+  <!--Theme Google Card - Full Image Cards-->
+  <ion-grid no-padding *ngIf="events != null && data != null">
+    <ion-row>
+      <ion-col no-padding col-12 col-md-6 *ngFor="let e of events;">
+        <ion-card background-size text-left (click)="viewEvent(e.eventId)" [ngStyle]="{'background-image': 'url(' + data.backgroundImage + ')'}">
+          <!--ngStyle]="{'background-image': 'url(' + data.backgroundImage + ')'}-->
+          <!-- Event Name -->
+          <div card-title>{{e.eventName}}</div>
+          <!-- Event Description and Date -->
+          <div text-wrap card-subtitle>
+            <b>Description:</b> {{e.description}} <br>
+            <!--<b>Creator:</b> {{e.creator}} <br>-->
+            <b>Time:</b> {{e.date | date:'EEEE, MMMM d y h:mm a'}}</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
 <!-- Bottom Button -->
