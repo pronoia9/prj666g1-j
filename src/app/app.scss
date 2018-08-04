@@ -25,20 +25,27 @@
       color: theme-colors('textColors', 'secondaryBase') !important;
       position: relative;
   }
-  img {
-      position: relative;
-      display: block;
-      padding-top: 24px;
-      max-width: 60px;
-      z-index: 99999;
-      position: relative;
-  }
   p {
-      font-size: 14px !important;
-      color: theme-colors('textColors', 'secondaryBase');
-      z-index: 99999;
-      position: relative;
-  }
+    font-size: 14px !important;
+    color: theme-colors('textColors', 'secondaryBase');
+    z-index: 99999;
+    position: relative;
+}
+  // IMAGES 
+  .logo {
+    position: relative;
+    display: block;
+    padding-top: 24px;
+    max-width: 60px;
+    z-index: 99999;
+    position: relative;
+}
+.avatar {
+  border-radius: 50% !important;
+  height: 92px;
+  width: 92px;
+  margin: 50px auto 0;
+}
 }
 
 // Settings Icon Header
@@ -62,4 +69,35 @@ ion-header {
 
 .masters {
   color: theme-colors('textColors', 'secondaryBase');
+}
+
+// BOTTOM BUTTONS
+.button-group {
+  .col {
+    &:first-child:not(:last-child) {
+      padding-right: 0;
+      .button {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+    &:not(:first-child):not(:last-child) {
+      padding-right: 0;
+      padding-left: 0;
+      .button {
+        border-radius: 0;
+      }
+    }
+    &:last-child:not(:first-child) {
+      padding-left: 0;
+      .button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+
+
+  
 }

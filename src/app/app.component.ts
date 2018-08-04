@@ -27,7 +27,7 @@ export class MyApp {
     "background": "assets/images/images/" + Math.ceil(Math.random() * 17) + ".jpg",
     "image": "assets/images/logo/1.png",
     "title": "MeeTogether",
-    "description": "Please login to consectetur elit, sed do euismod tempor incididunt",
+    "description": "Please login to ...something something meaningful something...",
   }
   isLogged: boolean = false;
   rootPage: any = LoginPage;
@@ -62,9 +62,9 @@ export class MyApp {
 
         this.pages = [
           { title: 'Home', component: HomePage, icon: 'home' },
-          { title: 'My Event', component: ManageEventPage, icon: 'calendar' },
-          { title: 'My Friends', component: FriendListPage, icon: 'people' },
           { title: 'My Profile', component: ProfilePage, icon: 'person' },
+          { title: 'My Friends', component: FriendListPage, icon: 'people' },
+          { title: 'My Events', component: ManageEventPage, icon: 'calendar' },
           //{ title: 'Avatars', component: AvatarsPage, icon: 'people' },
           { title: 'Logout', component: LogoutPage, icon: 'exit' }
           //{ title: 'Register', component: RegisterPage}
@@ -103,6 +103,10 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  appSettings() {
+    //
   }
 
   profileSettings() {

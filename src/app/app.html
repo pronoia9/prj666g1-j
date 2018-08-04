@@ -2,33 +2,42 @@
   <ion-header>
     <div header-background-image padding [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
       <ion-thumbnail>
-        <img *ngIf="isLogged == false" src="{{data.image}}">
-        <img *ngIf="isLogged == true" src="{{data.image}}" class="logged">
+        <img *ngIf="isLogged == false" src="{{data.image}}" class="logo">
+        <img *ngIf="isLogged == true" src="{{data.image}}" class="avatar">
       </ion-thumbnail>
       <h2 ion-text header-title>{{data.title}}</h2>
-      <p>{{data.description}}</p>
+      <p *ngIf="isLogged == false">{{data.description}}</p>
     </div>
   </ion-header>
 
-  <ion-content class="masters">
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        <ion-icon ios="ios-{{p.icon}}" md="md-{{p.icon}}"></ion-icon>{{p.title}}
-      </button>
-
-      <button ion-button clear *ngIf="isLogged == true" (click)="profileSettings()">
-        <ion-icon name="cog">Settings</ion-icon>
-      </button>
-
-      <button ion-button item-end float-right clear *ngIf="isLogged == true" (click)="logout()">
-        <ion-icon name="exit">Logout</ion-icon>
-      </button>
-      <button ion-button item-end float-right clear *ngIf="isLogged == false" (click)="login()">
-        <ion-icon name="exit">Login</ion-icon>
+  <ion-content>
+    <ion-list no-margin>
+      <button menuClose ion-item item-title main-menu no-lines border *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon icon-small item-left ios="ios-{{p.icon}}" md="md-{{p.icon}}"></ion-icon>{{p.title}}
       </button>
     </ion-list>
   </ion-content>
 
+  <!-- Bottom Buttons -->
+  <ion-footer transparent no-padding no-margin>
+    <ion-grid no-padding class="button-group">
+      <ion-row no-padding *ngIf="isLogged == false">
+        <ion-col no-padding>
+          <button ion-button item-start no-padding no-margin ion-button block color="primary" (click)="login()">
+            <ion-icon name="exit">Login</ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding *ngIf="isLogged == true">
+        <!--<ion-col no-padding><button ion-button item-start no-padding no-margin ion-button block color="secondary" (click)="profileSettings()"><ion-icon name="cog">Settings</ion-icon></button></ion-col>-->
+        <ion-col no-padding>
+          <button ion-button item-end no-padding no-margin ion-button block color="primary" (click)="logout()">
+            <ion-icon name="exit">Logout</ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

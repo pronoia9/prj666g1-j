@@ -199,17 +199,26 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-/**
- * Generated class for the AddFriendPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 var AddFriendPage = /** @class */ (function () {
-    function AddFriendPage(navCtrl, navParams, toastCtrl) {
+    function AddFriendPage(navCtrl, navParams, toastCtrl, actionSheetCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.toastCtrl = toastCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.data = {
+            "toolbarTitle": "Add Friend",
+            "backgroundImage": "",
+            "icon": "",
+            "title": "Find users",
+            "subtitle": "",
+            "email": "EMAIL",
+            "username": "USERNAME",
+            "qr": "Scan QR Code",
+            "headerImage": "assets/images/background/" + Math.ceil(Math.random() * 23) + ".jpg",
+        };
+        this.allUsers = {};
+        this.users = {};
+        this.searchTerm = "";
         this.user = {};
         this.email = "";
         this.user = navParams.data;
@@ -307,13 +316,18 @@ var AddFriendPage = /** @class */ (function () {
             });
         });
     };
+    AddFriendPage.prototype.getItems = function () {
+    };
+    AddFriendPage.prototype.search = function (user) {
+    };
     AddFriendPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-friend',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/add-friend/add-friend.html"*/'<!--\n  Generated template for the AddFriendPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add Friend</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Enter the email</ion-label>\n      <ion-input type="email" [(ngModel)]="email"></ion-input>\n    </ion-item>\n  </ion-list>\n  <span (click)="scanQR()">OR Scan their QR Code</span>\n  <button ion-button (click)="submitEmail()">Submit</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/add-friend/add-friend.html"*/,
+            selector: 'page-add-friend',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/add-friend/add-friend.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n\n  <!-- Search bar -->\n  <ion-toolbar no-padding>\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n      <div search-bar-bcg>\n        <!-- Header Title -->\n        <h1 ion-text no-margin padding-left search-bar-title>{{data.title}}</h1>\n        <!--<ion-searchbar [(ngModel)]="searchTerm" (ionInput)="search(searchTerm)"></ion-searchbar>-->\n        <ion-searchbar [(ngModel)]="email" (ionInput)="submitEmail()"></ion-searchbar>\n      </div>\n    </div>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <!--<ion-list>\n    <ion-item>\n      <ion-label floating>Enter the email</ion-label>\n      <ion-input type="email" [(ngModel)]="email"></ion-input>\n    </ion-item>\n  </ion-list>\n  <span (click)="scanQR()">OR Scan their QR Code</span>\n  <button ion-button (click)="submitEmail()">Submit</button>-->\n  <ion-grid no-padding>\n    <ion-row>\n      <!-- List Search-->\n      <ion-col col-12 *ngIf="users != null">\n        <!-- Content List -->\n        <ion-list no-margin>\n          <!--<ion-item border no-lines *ngFor="let u of users;">\n            <div gradient item-start>\n              <img images-filter [src]="u.avatar">\n            </div>\n            <h2 ion-text item-title text-wrap>{{u.username}}</h2>\n            <p ion-text item-subtitle text-wrap>{{u.firstName}} {{u.lastName}}</p>\n            <ion-note item-end>u.email</ion-note>\n          </ion-item>-->\n          <ion-item border no-lines>\n              <div gradient item-start>\n                <img images-filter src="assets/images/background/1.jpg">\n              </div>\n              <h2 ion-text item-title text-wrap>Username</h2>\n              <p ion-text item-subtitle text-wrap>First Last</p>\n              <ion-note item-end>email@email.com</ion-note>\n            </ion-item>\n            <ion-item border no-lines>\n                <div gradient item-start>\n                  <img images-filter src="assets/images/background/2.jpg">\n                </div>\n                <h2 ion-text item-title text-wrap>First Last</h2>\n                <p ion-text item-subtitle text-wrap>Username</p>\n                <ion-note item-end>email@email.com</ion-note>\n              </ion-item>\n              <ion-item border no-lines>\n                  <div gradient item-start>\n                    <img images-filter src="assets/images/background/3.jpg">\n                  </div>\n                  <h2 ion-text item-title text-wrap>First Last</h2>\n                  <p ion-text item-subtitle text-wrap>email@email.com</p>\n                  <ion-note item-end>Username</ion-note>\n                </ion-item>\n                <ion-item border no-lines>\n                    <div gradient item-start>\n                      <img images-filter src="assets/images/background/4.jpg">\n                    </div>\n                    <h2 ion-text item-title text-wrap>Username</h2>\n                    <p ion-text item-subtitle text-wrap>email@email.com</p>\n                    <ion-note item-end>[ Add ]</ion-note>\n                  </ion-item>\n                  <ion-item border no-lines>\n                      <div gradient item-start>\n                        <img images-filter src="assets/images/background/5.jpg">\n                      </div>\n                      <h2 ion-text item-title text-wrap>Username</h2>\n                      <p ion-text item-subtitle text-wrap>First Last</p>\n                      <ion-note item-end>[ Add ]</ion-note>\n                    </ion-item>\n                    <ion-item border no-lines>\n                        <div gradient item-start>\n                          <img images-filter src="assets/images/background/6.jpg">\n                        </div>\n                        <h2 ion-text item-title text-wrap>First Last</h2>\n                        <p ion-text item-subtitle text-wrap>email@email.com</p>\n                        <ion-note item-end>[ Add ]</ion-note>\n                      </ion-item>\n        </ion-list>\n        \n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n\n<!-- Bottom Button -->\n<ion-footer transparent no-padding>\n  <button no-padding no-margin ion-button block (click)="scanQR()">{{data.qr}}</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/add-friend/add-friend.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], AddFriendPage);
     return AddFriendPage;
 }());
