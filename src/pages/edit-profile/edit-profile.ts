@@ -11,10 +11,16 @@ import * as firebase from 'firebase';
 })
 export class EditProfilePage {
 
+  data: any = { "toolbarTitle" : "Edit Profile",
+                genders: [{ "id": 0, "title": "Female" },
+                { "id": 1, "title": "Male" },
+                { "id": 2, "title": "Other" },
+                { "id": 3, "title": "Private" }],
+  };
   user = {} as User;
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+    public navParams: NavParams) {
     // receive data from push
     this.user = navParams.data;
   }
@@ -33,4 +39,9 @@ export class EditProfilePage {
     this.navCtrl.pop();
   }
 
+  facebook() {
+  }
+
+  google() {
+  }
 }

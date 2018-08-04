@@ -1,39 +1,91 @@
-<!--
-  Generated template for the EditProfilePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Edit Profile</ion-title>
+<ion-header header-ios>
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->
   </ion-navbar>
-
 </ion-header>
 
+<ion-content padding-right elastic-header>
+  <ion-item-group>
+    <ion-item-divider border no-lines>
+      <h2 item-subtitle>Personal Info</h2>
+    </ion-item-divider>
+    <!--First and Last Name-->
+    <ion-item>
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <ion-label>First Name: </ion-label>
+      <ion-input type="text" [(ngModel)]="user.firstName" placeholder="{{user.firstName}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <ion-label>Last Name: </ion-label>
+      <ion-input type="text" [(ngModel)]="user.lastName" placeholder="{{user.lastName}}"></ion-input>
+    </ion-item>
+    <!--DoB-->
+    <ion-item>
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <ion-label>Birthday: </ion-label>
+      <ion-datetime displayFormat="MMMM/DD/YYYY" min="" max=""></ion-datetime>
+    </ion-item>
+    <!--Gender-->
+    <ion-item>
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <ion-label>Gender: </ion-label>
+      <ion-select multiple="false" interface="popover">
+        <ion-option *ngFor="let option of data.genders; let i = index" [value]="option.id">{{option.title}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-item-group>
 
-<ion-content padding>
-  <ion-item>
-    <ion-icon ios="ios-finger-print" md="md-finger-print"></ion-icon>
-    {{user.uid}}
-  </ion-item>
-  <ion-item>
-    <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
-    {{user.email}}
-  </ion-item>
-  <ion-item>
-    <ion-label floating>User Name</ion-label>
-    <ion-input type="text" [(ngModel)]="user.username"></ion-input>
-  </ion-item>
-  <ion-item>
-      <ion-label floating>First Name</ion-label>
-      <ion-input type="text" [(ngModel)]="user.firstName"></ion-input>
-  </ion-item>
-  <ion-item>
-      <ion-label floating>Last Name</ion-label>
-      <ion-input type="text" [(ngModel)]="user.lastName"></ion-input>
-  </ion-item>
-  <button ion-button block (click) = "saveBtn()">Save</button>
+  <ion-item-group>
+    <ion-item-divider border no-lines>
+      <h2 item-subtitle>Account Info</h2>
+    </ion-item-divider>
+    <!--Username-->
+    <ion-item>
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <ion-label>Username: </ion-label>
+      <ion-input [(ngModel)]="user.username" placeholder="{{user.username}}"></ion-input>
+    </ion-item>
+    <!--Email-->
+    <ion-item>
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <ion-label>Email: </ion-label>
+      <ion-input placeholder="{{user.email}}"></ion-input>
+    </ion-item>
+    <!--Password-->
+    <ion-item>
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <ion-label>Password: </ion-label>
+      <ion-input type="password" placeholder="********" disabled readonly></ion-input>
+      <ion-icon icon-small name="send" item-end></ion-icon>
+    </ion-item>
+  </ion-item-group>
 
+  <ion-item-group>
+    <ion-item-divider border no-lines>
+      <h2 item-subtitle>Connected Accounts</h2>
+    </ion-item-divider>
+    <!--PROPER ion-icons will prive a (click)="" link to link or unlink social accounts-->
+    <!--Facebook-->
+    <ion-item>
+      <ion-icon color="primary" ios="logo-facebook" md="logo-facebook" item-start></ion-icon>
+      <ion-label>Facebook</ion-label>
+      <ion-icon color="primary" name="close-circle" item-end (click)="facebook()"></ion-icon>
+    </ion-item>
+    <!--Google-->
+    <ion-item>
+      <ion-icon color="primary" ios="logo-google" md="logo-google" item-start></ion-icon>
+      <ion-label>Google+</ion-label>
+      <ion-icon color="primary" name="checkmark-circle" item-end (click)="google()"></ion-icon>
+    </ion-item>
+  </ion-item-group>
 </ion-content>
+
+<!-- Bottom Buttons -->
+<ion-footer transparent no-padding no-margin>
+  <button ion-button clear block (click)="saveBtn()">Save</button>
+  <!--<button ion-button block no-margin (click)="changePwd()">Change Password</button>-->
+</ion-footer>
