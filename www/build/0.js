@@ -7,7 +7,7 @@ webpackJsonp([0,1,12],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditProfilePageModule", function() { return EditProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_profile__ = __webpack_require__(770);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -27,7 +27,7 @@ var EditProfilePageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__edit_profile__["a" /* EditProfilePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_profile__["a" /* EditProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_profile__["a" /* EditProfilePage */]),
             ],
         })
     ], EditProfilePageModule);
@@ -45,7 +45,7 @@ var EditProfilePageModule = /** @class */ (function () {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QrCodePageModule", function() { return QrCodePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_qrcode2__ = __webpack_require__(775);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__qr_code__ = __webpack_require__(795);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -67,7 +67,7 @@ var QrCodePageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__qr_code__["a" /* QrCodePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__qr_code__["a" /* QrCodePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__qr_code__["a" /* QrCodePage */]),
                 __WEBPACK_IMPORTED_MODULE_2_ngx_qrcode2__["a" /* NgxQRCodeModule */]
             ],
         })
@@ -86,7 +86,7 @@ var QrCodePageModule = /** @class */ (function () {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__edit_profile_edit_profile_module__ = __webpack_require__(743);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__qr_code_qr_code_module__ = __webpack_require__(748);
@@ -110,7 +110,7 @@ var ProfilePageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
                 __WEBPACK_IMPORTED_MODULE_3__edit_profile_edit_profile_module__["EditProfilePageModule"],
                 __WEBPACK_IMPORTED_MODULE_4__qr_code_qr_code_module__["QrCodePageModule"]
             ],
@@ -1347,7 +1347,7 @@ exports.qrToImageData = function qrToImageData (imgData, qr, margin, scale, colo
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1392,12 +1392,14 @@ var EditProfilePage = /** @class */ (function () {
     };
     EditProfilePage.prototype.google = function () {
     };
+    EditProfilePage.prototype.changePwd = function () {
+    };
     EditProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-edit-profile',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/edit-profile/edit-profile.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding-right elastic-header>\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Personal Info</h2>\n    </ion-item-divider>\n    <!--First and Last Name-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>First Name: </ion-label>\n      <ion-input type="text" [(ngModel)]="user.firstName" placeholder="{{user.firstName}}"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Last Name: </ion-label>\n      <ion-input type="text" [(ngModel)]="user.lastName" placeholder="{{user.lastName}}"></ion-input>\n    </ion-item>\n    <!--DoB-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Birthday: </ion-label>\n      <ion-datetime displayFormat="MMMM/DD/YYYY" min="" max=""></ion-datetime>\n    </ion-item>\n    <!--Gender-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Gender: </ion-label>\n      <ion-select multiple="false" interface="popover">\n        <ion-option *ngFor="let option of data.genders; let i = index" [value]="option.id">{{option.title}}</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Account Info</h2>\n    </ion-item-divider>\n    <!--Username-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Username: </ion-label>\n      <ion-input [(ngModel)]="user.username" placeholder="{{user.username}}"></ion-input>\n    </ion-item>\n    <!--Email-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Email: </ion-label>\n      <ion-input placeholder="{{user.email}}"></ion-input>\n    </ion-item>\n    <!--Password-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Password: </ion-label>\n      <ion-input type="password" placeholder="********" disabled readonly></ion-input>\n      <ion-icon icon-small name="send" item-end></ion-icon>\n    </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Connected Accounts</h2>\n    </ion-item-divider>\n    <!--PROPER ion-icons will prive a (click)="" link to link or unlink social accounts-->\n    <!--Facebook-->\n    <ion-item>\n      <ion-icon color="primary" ios="logo-facebook" md="logo-facebook" item-start></ion-icon>\n      <ion-label>Facebook</ion-label>\n      <ion-icon color="primary" name="close-circle" item-end (click)="facebook()"></ion-icon>\n    </ion-item>\n    <!--Google-->\n    <ion-item>\n      <ion-icon color="primary" ios="logo-google" md="logo-google" item-start></ion-icon>\n      <ion-label>Google+</ion-label>\n      <ion-icon color="primary" name="checkmark-circle" item-end (click)="google()"></ion-icon>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n\n<!-- Bottom Buttons -->\n<ion-footer transparent no-padding no-margin>\n  <button ion-button clear block (click)="saveBtn()">Save</button>\n  <!--<button ion-button block no-margin (click)="changePwd()">Change Password</button>-->\n</ion-footer>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/edit-profile/edit-profile.html"*/,
+            selector: 'page-edit-profile',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/edit-profile/edit-profile.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding-right elastic-header>\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Personal Info</h2>\n    </ion-item-divider>\n    <!--First and Last Name-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>First Name: </ion-label>\n      <ion-input type="text" [(ngModel)]="user.firstName" placeholder="{{user.firstName}}"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Last Name: </ion-label>\n      <ion-input type="text" [(ngModel)]="user.lastName" placeholder="{{user.lastName}}"></ion-input>\n    </ion-item>\n    <!--DoB-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Birthday: </ion-label>\n      <ion-datetime displayFormat="MMMM/DD/YYYY" min="" max=""></ion-datetime>\n    </ion-item>\n    <!--Gender-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Gender: </ion-label>\n      <ion-select multiple="false" interface="popover">\n        <ion-option *ngFor="let option of data.genders; let i = index" [value]="option.id">{{option.title}}</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Account Info</h2>\n    </ion-item-divider>\n    <!--Username-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Username: </ion-label>\n      <ion-input [(ngModel)]="user.username" placeholder="{{user.username}}"></ion-input>\n    </ion-item>\n    <!--Email-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Email: </ion-label>\n      <ion-input placeholder="{{user.email}}"></ion-input>\n    </ion-item>\n    <!--Password-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <ion-label>Password: </ion-label>\n      <ion-input type="password" placeholder="********" disabled readonly></ion-input>\n      <ion-icon icon-small name="send" item-end></ion-icon>\n    </ion-item>\n    <!--CHOOSE ONE, ABOVE OR BELOW FOR PASSWORD-->\n    <ion-item no-margin>\n      <ion-icon color="primary" name="code-working" item-start></ion-icon>\n      <button no-padding no-margin ion-button clear (click)="changePwd()">Change Password</button>\n    </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Connected Accounts</h2>\n    </ion-item-divider>\n    <!--PROPER ion-icons will prive a (click)="" link to link or unlink social accounts-->\n    <!--Facebook-->\n    <ion-item>\n      <ion-icon color="primary" ios="logo-facebook" md="logo-facebook" item-start></ion-icon>\n      <ion-label>Facebook</ion-label>\n      <ion-icon color="primary" name="close-circle" item-end (click)="facebook()"></ion-icon>\n    </ion-item>\n    <!--Google-->\n    <ion-item>\n      <ion-icon color="primary" ios="logo-google" md="logo-google" item-start></ion-icon>\n      <ion-label>Google+</ion-label>\n      <ion-icon color="primary" name="checkmark-circle" item-end (click)="google()"></ion-icon>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n\n<!-- Bottom Buttons -->\n<ion-footer transparent no-padding no-margin>\n  <button ion-button clear block (click)="saveBtn()">Save</button>\n  <!--<button ion-button block no-margin (click)="changePwd()">Change Password</button>-->\n</ion-footer>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/edit-profile/edit-profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], EditProfilePage);
     return EditProfilePage;
 }());
@@ -3719,7 +3721,7 @@ exports.render = function render (qrData, options) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QrCodePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3750,8 +3752,8 @@ var QrCodePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-qr-code',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/qr-code/qr-code.html"*/'<!--\n  Generated template for the QrCodePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>QR Code</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div>\n    <ion-card>\n        <ngx-qrcode [qrc-value]="QRstr"></ngx-qrcode>\n        <ion-card-content>\n          <p></p>\n        </ion-card-content>\n      </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/qr-code/qr-code.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], QrCodePage);
     return QrCodePage;
 }());

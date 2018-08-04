@@ -7,7 +7,7 @@ webpackJsonp([3,8,13,15],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(762);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -27,7 +27,7 @@ var ChatPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]),
             ],
         })
     ], ChatPageModule);
@@ -45,7 +45,7 @@ var ChatPageModule = /** @class */ (function () {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditEventPageModule", function() { return EditEventPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_event__ = __webpack_require__(763);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -65,7 +65,7 @@ var EditEventPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__edit_event__["a" /* EditEventPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_event__["a" /* EditEventPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_event__["a" /* EditEventPage */]),
             ],
         })
     ], EditEventPageModule);
@@ -83,7 +83,7 @@ var EditEventPageModule = /** @class */ (function () {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewEventParticipantsPageModule", function() { return ViewEventParticipantsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_event_participants__ = __webpack_require__(764);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -103,7 +103,7 @@ var ViewEventParticipantsPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__view_event_participants__["a" /* ViewEventParticipantsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__view_event_participants__["a" /* ViewEventParticipantsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__view_event_participants__["a" /* ViewEventParticipantsPage */]),
             ],
         })
     ], ViewEventParticipantsPageModule);
@@ -121,7 +121,7 @@ var ViewEventParticipantsPageModule = /** @class */ (function () {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewEventPageModule", function() { return ViewEventPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_event__ = __webpack_require__(774);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__edit_event_edit_event_module__ = __webpack_require__(740);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__chat_chat_module__ = __webpack_require__(739);
@@ -147,7 +147,7 @@ var ViewEventPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__view_event__["a" /* ViewEventPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__view_event__["a" /* ViewEventPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__view_event__["a" /* ViewEventPage */]),
                 __WEBPACK_IMPORTED_MODULE_3__edit_event_edit_event_module__["EditEventPageModule"],
                 __WEBPACK_IMPORTED_MODULE_5__view_event_participants_view_event_participants_module__["ViewEventParticipantsPageModule"],
                 __WEBPACK_IMPORTED_MODULE_4__chat_chat_module__["ChatPageModule"]
@@ -167,7 +167,7 @@ var ViewEventPageModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_firebase__);
@@ -242,8 +242,8 @@ var ChatPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-chat',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/chat/chat.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{chatTitle}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <!-- Message Area -->\n  <div class="message-area">\n    <div *ngFor="let msg of msgList"\n         class="message">\n      <p>{{msg.sender}} :  {{msg.content}}</p>\n    </div>\n\n  </div>\n</ion-content>\n\n<ion-footer no-border [style.height]="emojiDisplay ? \'255px\' : \'55px\'">\n  <div class="input-area">\n    <!-- Emoji Button -->\n    <button ion-button clear icon-only item-right (click)="emojiBtn()">\n      <ion-icon name="md-happy"></ion-icon>\n    </button>\n\n    <!-- Input Area -->\n    <textarea #msg_Input\n              (keyup.enter)="sendBtn()" \n              placeholder="Say Something" \n              [(ngModel)]="msgInput"> &nbsp;\n    </textarea>\n    \n    <!-- Submit Button -->\n    <button ion-button clear icon-only item-right (click)="sendBtn()">\n      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>\n    </button>\n\n  </div>\n\n</ion-footer>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/chat/chat.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */]])
     ], ChatPage);
     return ChatPage;
@@ -259,7 +259,7 @@ var ChatPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditEventPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(380);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_firebase__);
@@ -401,9 +401,9 @@ var EditEventPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-edit-event',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/edit-event/edit-event.html"*/'<!--\n  Generated template for the EditEventPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Event</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Event Title</ion-label>\n      <ion-input type="text" [(ngModel)]="event.eventName"></ion-input>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label floating>Event Date</ion-label>\n      <ion-datetime displayFormat="MM/DD/YYYY H:mm" [(ngModel)]="event.date"></ion-datetime>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label floating>Description</ion-label>\n      <ion-textarea type="text" [(ngModel)]="event.description"></ion-textarea>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label>Private Event</ion-label>\n      <ion-toggle [(ngModel)]="event.isPrivate"></ion-toggle>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label>Set Password</ion-label>\n      <ion-toggle [(ngModel)]="hasPassword"></ion-toggle>\n    </ion-item>\n    <ion-item *ngIf="hasPassword">\n      <ion-input [(ngModel)]="event.password" type="password" placeholder="enter password" ></ion-input>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label>Set Range</ion-label>\n      <ion-toggle [(ngModel)]="hasRadius" (ngModelChange)="setCircle()"></ion-toggle>\n    </ion-item>\n    <ion-item *ngIf="hasRadius">\n      <ion-input [(ngModel)]="event.radius" type="number" placeholder="range in meter" (ngModelChange)="setCircle()">0</ion-input>\n    </ion-item>\n  </ion-list>\n  <div #map id="map"></div>\n  <button ion-button block (click)="saveBtn()">Save</button>\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/edit-event/edit-event.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */]])
     ], EditEventPage);
     return EditEventPage;
 }());
@@ -418,7 +418,7 @@ var EditEventPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewEventParticipantsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -519,8 +519,8 @@ var ViewEventParticipantsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-view-event-participants',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event-participants/view-event-participants.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content elastic-header>\n  <div background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n    <div parallax-header *ngIf="data != null">\n      <h2 no-margin parallax-subtitle>{{data.title}}</h2>\n      <h2 no-margin parallax-title>{{data.subtitle}}</h2>\n    </div>\n  </div>\n\n  <!--Content-->\n  <ion-grid no-padding>\n    <ion-row *ngIf="data != null">\n      <ion-col col-12>\n        <ion-list no-margin>\n          <ion-item item-bcg border no-lines *ngFor="let p of participants">\n            <!--Participant Info-->\n            <ion-thumbnail item-start><img [src]="p.avatar"></ion-thumbnail>\n            <h2 no-margin item-title>{{p.username}}</h2>\n            <h3 item-subtitle text-wrap>{{p.firstName}} {{p.lastName}}</h3>\n            <h3 item-subtitle text-wrap>{{p.email}}</h3>\n            <!--More Badge-->\n            <ion-badge badge-light item-end (click)="presentActionSheet(p)">{{data.button}}</ion-badge>\n          </ion-item>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event-participants/view-event-participants.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], ViewEventParticipantsPage);
     return ViewEventParticipantsPage;
@@ -536,7 +536,7 @@ var ViewEventParticipantsPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewEventPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_maps__ = __webpack_require__(380);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(71);
@@ -784,10 +784,10 @@ var ViewEventPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-view-event',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event/view-event.html"*/'<ion-header>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>-->\n    <ion-title *ngIf="data != null">{{event.eventName}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<!--Content -->\n<ion-content elastic-header>\n  <div #map id="map"></div>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12 map-header>\n        <ion-item lines no-padding>\n          <!--Event Title/Name-->\n          <ion-item-divider border no-lines>\n            <h1 no-padding padding-left maps-title margin-top text-wrap>{{event.eventName}}</h1>\n            <!--<ion-icon no-padding item-end (click)="presentActionSheet()" icon-medium ios="ios-more" md="md-more"></ion-icon>-->\n            <button padding-top text-capitalize button-clear ion-button item-end clear (click)="presentActionSheet(user, event)"><ion-icon name="more"></ion-icon></button>\n          </ion-item-divider>\n          <!--Event Info-->\n          <div padding-left padding-top>\n              <h2 ion-text float-left color="primary"> Participants: ###</h2><!--{{event.participants.length}}-->\n              <!--<ion-icon no-padding no-margin no-border icon-small ios="ios-people" md="md-people" (click)="viewParticipants()" item-start></ion-icon>-->\n          </div>\n        </ion-item>\n      </ion-col>\n\n      <ion-col col-12 map-content transparent>\n        <ion-item-group>\n          <ion-item-divider no-lines>\n            <h2 maps-description-title text-wrap margin-bottom>{{data.description}}</h2>\n            <p maps-description text-wrap>{{event.description}}</p>\n          </ion-item-divider>\n          <!--Info Location-->\n          <ion-item border>\n            <ion-icon icon-medium ion-text color="primary" ios="ios-locate" md="md-locate" item-start></ion-icon>\n            <h2 no-padding>{{event.location}}</h2>\n          </ion-item>\n          <!--Info Time-->\n          <ion-item border>\n            <ion-icon icon-medium color="primary" ios="ios-timer" md="md-timer" item-start></ion-icon>\n            <h2 no-padding>{{event.date | date:\'yyyy MMM dd H:mm\'}}</h2>\n          </ion-item>\n          <!--Info Creator-->\n          <ion-item border>\n            <ion-icon icon-medium color="primary" ios="ios-person" md="md-person" item-start></ion-icon>\n            <h2 no-padding>Created by {{event.creator}}</h2>\n          </ion-item>\n          <!--Info Chat-->\n          <ion-item border>\n            <button button-clear clear ion-button (click)="groupChatBtn()" no-padding>\n              <ion-icon icon-medium color="primary" ios="ios-chatbubbles" md="md-chatbubbles" item-start></ion-icon>\n              <h2 no-padding>Group Chat</h2>\n            </button>\n          </ion-item>\n          <!--Info Participants-->\n          <ion-item border>\n            <button button-clear clear ion-button (click)="viewParticipants()" no-padding>\n              <ion-icon icon-medium color="primary" ios="ios-people" md="md-people" item-start></ion-icon>\n              <h2 no-padding>View Participants</h2>\n            </button>\n          </ion-item>\n          <!--Leave Event-->\n          <ion-item border>\n            <button button-clear color="danger" clear ion-button (click)="leaveEventBtn()" no-padding>\n              <ion-icon icon-medium color="primary" ios="ios-exit" md="md-exit" item-start></ion-icon>\n              <h2 no-padding>Leave Event</h2>\n            </button>\n          </ion-item>\n        </ion-item-group>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/view-event/view-event.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], ViewEventPage);
     return ViewEventPage;

@@ -62,6 +62,11 @@
       <ion-input type="password" placeholder="********" disabled readonly></ion-input>
       <ion-icon icon-small name="send" item-end></ion-icon>
     </ion-item>
+    <!--CHOOSE ONE, ABOVE OR BELOW FOR PASSWORD-->
+    <ion-item no-margin>
+      <ion-icon color="primary" name="code-working" item-start></ion-icon>
+      <button no-padding no-margin ion-button clear (click)="changePwd()">Change Password</button>
+    </ion-item>
   </ion-item-group>
 
   <ion-item-group>

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, Events, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AlertController } from 'ionic-angular';
 
 // Page declarations for navigations
 import { HomePage } from '../pages/home/home';
@@ -26,6 +27,9 @@ export class MyApp {
     "toolbarTitle": "Menu",
     "background": "assets/images/images/" + Math.ceil(Math.random() * 17) + ".jpg",
     "image": "assets/images/logo/1.png",
+    "userImage": "",
+    "username": "",
+    "userName": "",
     "title": "MeeTogether",
     "description": "Please login to ...something something meaningful something...",
   }
@@ -36,8 +40,9 @@ export class MyApp {
   constructor(public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
+    private alertCtrl: AlertController,
     //public navCtrl: NavController,
-    public events: Events) {
+    public events: Events,) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -51,14 +56,15 @@ export class MyApp {
     events.subscribe('login_status', (isLogin, user) => {
       if (isLogin && user != null) {
         this.isLogged = true;
-        this.data.image = user.avatar;
-        this.data.title = user.username; 
-        this.data.description = user.firstName + " " + user.lastName; 
+
+        this.data.userImage = user.avatar;
+        this.data.username = user.username; 
+        this.data.userName = user.firstName + " " + user.lastName; 
         
         // TODO: NEED TO RETRIEVE THE DATA "CORRECTLY" ABOVE 
-        this.data.image = "assets/images/avatars/20.jpg";
-        this.data.title = "BoredPanda"; 
-        this.data.description = "Jay Ansin"; 
+        this.data.userImage = "assets/images/avatars/20.jpg";
+        this.data.username = "BoredPanda"; 
+        this.data.userName = "Jay Ansin"; 
 
         this.pages = [
           { title: 'Home', component: HomePage, icon: 'home' },
@@ -119,5 +125,26 @@ export class MyApp {
 
   logout() {
     //this.navCtrl.push('LogoutPage');
+    let alert = this.alertCtrl.create({
+      title: 'Confirm logout',
+      message: 'Are you sure you want to logout?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Logout',
+          handler: () => {
+            // LOG USER OUT
+            console.log('Logout clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 }

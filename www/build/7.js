@@ -7,7 +7,7 @@ webpackJsonp([7,11],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QrScanPageModule", function() { return QrScanPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__qr_scan__ = __webpack_require__(759);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -28,7 +28,7 @@ var QrScanPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__qr_scan__["a" /* QrScanPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__qr_scan__["a" /* QrScanPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__qr_scan__["a" /* QrScanPage */]),
             ],
         })
     ], QrScanPageModule);
@@ -46,7 +46,7 @@ var QrScanPageModule = /** @class */ (function () {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddFriendPageModule", function() { return AddFriendPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_friend__ = __webpack_require__(769);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__qr_scan_qr_scan_module__ = __webpack_require__(738);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -68,7 +68,7 @@ var AddFriendPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__add_friend__["a" /* AddFriendPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__add_friend__["a" /* AddFriendPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__add_friend__["a" /* AddFriendPage */]),
                 __WEBPACK_IMPORTED_MODULE_3__qr_scan_qr_scan_module__["QrScanPageModule"],
             ],
         })
@@ -86,7 +86,7 @@ var AddFriendPageModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QrScanPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__ = __webpack_require__(379);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -132,8 +132,8 @@ var QrScanPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-qr-scan',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/qr-scan/qr-scan.html"*/'<!--\n  Generated template for the QrScanPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Scan the QR code</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <h6>Cannot Read QR Code<br></h6>\n  <button ion-button block outline (click)="scanQR()">Scan Again?</button>\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/qr-scan/qr-scan.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]])
     ], QrScanPage);
     return QrScanPage;
@@ -149,7 +149,7 @@ var QrScanPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddFriendPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -324,9 +324,9 @@ var AddFriendPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-add-friend',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/add-friend/add-friend.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n\n  <!-- Search bar -->\n  <ion-toolbar no-padding>\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n      <div search-bar-bcg>\n        <!-- Header Title -->\n        <h1 ion-text no-margin padding-left search-bar-title>{{data.title}}</h1>\n        <!--<ion-searchbar [(ngModel)]="searchTerm" (ionInput)="search(searchTerm)"></ion-searchbar>-->\n        <ion-searchbar [(ngModel)]="email" (ionInput)="submitEmail()"></ion-searchbar>\n      </div>\n    </div>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <!--<ion-list>\n    <ion-item>\n      <ion-label floating>Enter the email</ion-label>\n      <ion-input type="email" [(ngModel)]="email"></ion-input>\n    </ion-item>\n  </ion-list>\n  <span (click)="scanQR()">OR Scan their QR Code</span>\n  <button ion-button (click)="submitEmail()">Submit</button>-->\n  <ion-grid no-padding>\n    <ion-row>\n      <!-- List Search-->\n      <ion-col col-12 *ngIf="users != null">\n        <!-- Content List -->\n        <ion-list no-margin>\n          <!--<ion-item border no-lines *ngFor="let u of users;">\n            <div gradient item-start>\n              <img images-filter [src]="u.avatar">\n            </div>\n            <h2 ion-text item-title text-wrap>{{u.username}}</h2>\n            <p ion-text item-subtitle text-wrap>{{u.firstName}} {{u.lastName}}</p>\n            <ion-note item-end>u.email</ion-note>\n          </ion-item>-->\n          <ion-item border no-lines>\n              <div gradient item-start>\n                <img images-filter src="assets/images/background/1.jpg">\n              </div>\n              <h2 ion-text item-title text-wrap>Username</h2>\n              <p ion-text item-subtitle text-wrap>First Last</p>\n              <ion-note item-end>email@email.com</ion-note>\n            </ion-item>\n            <ion-item border no-lines>\n                <div gradient item-start>\n                  <img images-filter src="assets/images/background/2.jpg">\n                </div>\n                <h2 ion-text item-title text-wrap>First Last</h2>\n                <p ion-text item-subtitle text-wrap>Username</p>\n                <ion-note item-end>email@email.com</ion-note>\n              </ion-item>\n              <ion-item border no-lines>\n                  <div gradient item-start>\n                    <img images-filter src="assets/images/background/3.jpg">\n                  </div>\n                  <h2 ion-text item-title text-wrap>First Last</h2>\n                  <p ion-text item-subtitle text-wrap>email@email.com</p>\n                  <ion-note item-end>Username</ion-note>\n                </ion-item>\n                <ion-item border no-lines>\n                    <div gradient item-start>\n                      <img images-filter src="assets/images/background/4.jpg">\n                    </div>\n                    <h2 ion-text item-title text-wrap>Username</h2>\n                    <p ion-text item-subtitle text-wrap>email@email.com</p>\n                    <ion-note item-end>[ Add ]</ion-note>\n                  </ion-item>\n                  <ion-item border no-lines>\n                      <div gradient item-start>\n                        <img images-filter src="assets/images/background/5.jpg">\n                      </div>\n                      <h2 ion-text item-title text-wrap>Username</h2>\n                      <p ion-text item-subtitle text-wrap>First Last</p>\n                      <ion-note item-end>[ Add ]</ion-note>\n                    </ion-item>\n                    <ion-item border no-lines>\n                        <div gradient item-start>\n                          <img images-filter src="assets/images/background/6.jpg">\n                        </div>\n                        <h2 ion-text item-title text-wrap>First Last</h2>\n                        <p ion-text item-subtitle text-wrap>email@email.com</p>\n                        <ion-note item-end>[ Add ]</ion-note>\n                      </ion-item>\n        </ion-list>\n        \n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n\n<!-- Bottom Button -->\n<ion-footer transparent no-padding>\n  <button no-padding no-margin ion-button block (click)="scanQR()">{{data.qr}}</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/add-friend/add-friend.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], AddFriendPage);
     return AddFriendPage;

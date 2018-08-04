@@ -44,4 +44,7 @@ export class EditProfilePage {
 
   google() {
   }
+
+  changePwd() {
+  }
 }

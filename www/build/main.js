@@ -6,7 +6,7 @@ webpackJsonp([18],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(48);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -54,9 +54,9 @@ var HomePage = /** @class */ (function () {
             selector: 'page-home',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/home/home.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content elastic-header padding>\n  <div *ngIf="data != null && data.background != null" background-size default-background [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n    <div class="ionic-description" text-center>\n      <h2 item-title>{{data.title}}</h2>\n      <h2 item-title>{{data.subtitle}}</h2>\n      <p item-subtitle>{{data.subtitle2}}</p>\n    </div>\n    <a [href]="data.link" target="_blank">{{data.description}}</a>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/home/home.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], HomePage);
     return HomePage;
 }());
@@ -71,7 +71,7 @@ var HomePage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FriendListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -178,8 +178,8 @@ var FriendListPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-friend-list',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/friend-list/friend-list.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n\n  <!-- Search bar -->\n  <ion-toolbar no-padding>\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n      <div search-bar-bcg>\n        <!-- Header Title -->\n        <h1 ion-text no-margin padding-left search-bar-title>{{data.title}}</h1>\n        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="search(searchTerm)"></ion-searchbar>\n      </div>\n    </div>\n  </ion-toolbar>\n</ion-header>\n\n\n<!-- Content -->\n<ion-content elastic-header>\n  <ion-list *ngIf="friendList != null">\n    <ion-item border no-lines *ngFor="let friend of friendList; let i = index">\n      <ion-avatar item-start>\n        <img [src]="friend.avatar" />\n      </ion-avatar>\n      <h2 item-title>{{friend.firstName}} {{friend.lastName}}</h2>\n      <h3 item-subtitle text-wrap>{{friend.username}}</h3>\n      <!-- Action Sheet Button -->\n      <button text-capitalize button-clear ion-button item-end clear (click)="presentActionSheet()">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<!-- Bottom Button -->\n<ion-footer transparent>\n  <ion-fab bottom right>\n    <button ion-fab>...</button>\n    <ion-fab-list side="top">\n      <button ion-fab (click)="addFriend()">+</button>\n      <button ion-fab (click)="editFriends()">=</button>\n    </ion-fab-list>\n  </ion-fab>\n</ion-footer>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/friend-list/friend-list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], FriendListPage);
     return FriendListPage;
@@ -195,7 +195,7 @@ var FriendListPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_firebase__);
@@ -365,10 +365,10 @@ var LoginPage = /** @class */ (function () {
             selector: 'page-login',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/'<ion-header>\n\n    <ion-navbar>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n    </ion-navbar>\n  \n  </ion-header>\n  \n  <ion-content>\n    <ion-grid no-padding *ngIf = "data != null">\n      <ion-row padding-horizontal align-self-center>\n  \n        <ion-col align-self start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <button ion-button button-clear text-capitalize clear float-left (click)="login(user)">{{data.other}}</button>\n          <button ion-button button-clear text-capitalize clear float-right (click)="resetPwd()">{{data.forgotPassword}}</button>\n        </ion-col>\n        \n        <ion-col align-self-end col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!--Logo-->\n          <img [src]="data.logo">\n          <!--Logo Subtitle-->\n          <h2 login-subtitle no-margin>{{data.subtitle}}</h2>\n          <!---Logo Title-->\n          <h1 ion-text padding-bottom login-title no-margin>{{data.title}}</h1>\n        </ion-col>\n  \n        <ion-col align-self-start col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!---Input field username-->\n          <ion-item transparent>\n            <ion-label stacked>{{data.labelEmail}}</ion-label>\n            <ion-input required placeholder="{{data.email}}" type="email" [(ngModel)]="user.email"></ion-input>\n          </ion-item>\n  \n          <!--Input field password-->\n          <ion-item transparent>\n            <ion-label stacked>{{data.labelPassword}}</ion-label>\n            <ion-input required type="password" placeholder="{{data.password}}" [(ngModel)]="password"></ion-input>\n          </ion-item>\n        </ion-col>\n  \n        <!--Share Section-->\n        <ion-col align-self-end bottom-form col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n          <!---Login button-->\n          <button ion-button  full text-capitalize default-button (click)="login(user)">Login</button>\n          <!---Facebook button-->\n          <button ion-button default-button color="facebook" full text-capitalize block><ion-icon name="logo-facebook"></ion-icon> Login with Facebook</button>\n          <!---Google button-->\n          <button ion-button default-button google-button color="google" full text-capitalize block><ion-icon name="logo-google"></ion-icon> Login with Google</button>\n        </ion-col>\n  \n        <ion-col col-12>\n          <div description text-center>\n            <p>Don\'t have an account? <a text-capitalize ion-text color="primary" (click)="register()">Register</a></p>\n          </div>\n        </ion-col>\n        <!--End Share Section-->\n      </ion-row>\n    </ion-grid>\n  </ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -383,7 +383,7 @@ var LoginPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogoutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(48);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -427,11 +427,11 @@ var LogoutPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-logout',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/logout/logout.html"*/'<!--\n  Generated template for the LogoutPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Logout</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <h2> Are you sure you want to logout? </h2>\n\n  <p> Note: After Logout you cannot get the notification from others! </p>\n\n  <button ion-button (click)="logoutBtnListener()">Logout</button>\n</ion-content>\n'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/logout/logout.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */]])
     ], LogoutPage);
     return LogoutPage;
 }());
@@ -446,7 +446,7 @@ var LogoutPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManageEventPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -537,8 +537,8 @@ var ManageEventPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-manage-event',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/manage-event/manage-event.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n\n  <!-- Search bar -->\n  <ion-toolbar no-padding>\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n      <div search-bar-bcg>\n        <!-- Header Title -->\n        <h1 ion-text no-margin padding-left search-bar-title>{{data.title}}</h1>\n        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="search(searchTerm)"></ion-searchbar>\n      </div>\n    </div>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content elastic-header>\n  <!--Theme Google Card - Full Image Cards-->\n  <ion-grid no-padding *ngIf="events != null && data != null">\n    <ion-row>\n      <ion-col no-padding col-12 col-md-6 *ngFor="let e of events;">\n        <ion-card background-size text-left (click)="viewEvent(e.eventId)" [ngStyle]="{\'background-image\': \'url(\' + data.backgroundImage + \')\'}">\n          <!--ngStyle]="{\'background-image\': \'url(\' + data.backgroundImage + \')\'}-->\n          <!-- Event Name -->\n          <div card-title>{{e.eventName}}</div>\n          <!-- Event Description and Date -->\n          <div text-wrap card-subtitle>\n            <b>Description:</b> {{e.description}} <br>\n            <!--<b>Creator:</b> {{e.creator}} <br>-->\n            <b>Time:</b> {{e.date | date:\'EEEE, MMMM d y h:mm a\'}}</div>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n\n<!-- Bottom Button -->\n<ion-footer transparent>\n  <ion-fab bottom right>\n    <button ion-fab>\n      <ion-icon ios="ios-add" md="md-add"></ion-icon>\n    </button>\n    <ion-fab-list side="top">\n      <button (click)="createEvent()" ion-fab>Create</button>\n      <button (click)="joinEvent()" ion-fab>Join</button>\n    </ion-fab-list>\n  </ion-fab>\n</ion-footer>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/manage-event/manage-event.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], ManageEventPage);
     return ManageEventPage;
@@ -554,7 +554,7 @@ var ManageEventPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_firebase__);
@@ -631,12 +631,12 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/profile/profile.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content elastic-header>\n  <div padding background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n    <ion-thumbnail *ngIf="user != null">\n      <img [src]="user.avatar" />\n    </ion-thumbnail>\n    <h2 text-center parallax-title *ngIf="user != null">{{user.username}}</h2>\n    <h3 text-center parallax-subtitle *ngIf="user != null">{{user.firstName}} {{user.lastName}}</h3>\n  </div>\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Personal Info</h2>\n      <!--<button item-end ion-button button-action-shit><ion-icon name="more" role="img" class="icon icon-ios ion-ios-more" aria-label="more" ng-reflect-name="more"></ion-icon></button>-->\n    </ion-item-divider>\n    <!--First and Last Name-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <p><b>Name:</b> {{user.firstName}} {{user.lastName}}</p>\n      <!--<ion-icon icon-small ios="ios-create" md="md-create" item-end></ion-icon>-->\n    </ion-item>\n    <!--DoB-->\n    <ion-item>\n        <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n        <!--TODO: Add this to the user database, it should be empty or w/e (-, n/a, etc.) by default. if/when the user add this info then its displayed-->\n        <p><b>Birthday:</b> 15/4/1995</p>\n      </ion-item>\n      <!--Gender-->\n    <ion-item>\n        <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n        <!--TODO: Add this to the user database, it should be empty or w/e (-, n/a, etc.) by default. if/when the user add this info then its displayed-->\n        <p><b>Gender:</b> Female</p>\n      </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Account Info</h2>\n    </ion-item-divider>\n    <!--Username-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <p><b>Username:</b> {{user.username}}</p>\n    </ion-item>\n    <!--Email-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <p><b>Email:</b> {{user.email}}</p>\n    </ion-item>\n    <!--Password-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <p><b>Password:</b> *********</p>\n      <ion-icon icon-small name="send" item-end (click)="changePwd()"></ion-icon>\n    </ion-item>\n    <!--QR-->\n    <ion-item (click)="getQr()">\n      <ion-icon color="primary" name="finger-print" item-start></ion-icon>\n      <p><b>Show QR Code</b></p>\n    </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Connected Accounts</h2>\n    </ion-item-divider>\n    <!--Facebook-->\n    <ion-item>\n      <ion-icon color="primary" ios="logo-facebook" md="logo-facebook" item-start></ion-icon>\n      <p no-padding>Facebook</p>\n      <!--TODO: do a check to decide which icon to display-->\n      <ion-icon color="primary" name="close-circle" item-end></ion-icon>\n    </ion-item>\n    <!--Google-->\n    <ion-item>\n      <ion-icon color="primary" ios="logo-google" md="logo-google" item-start></ion-icon>\n      <p no-padding>Google+</p>\n      <!--TODO: do a check to decide which icon to display-->\n      <ion-icon color="primary" name="checkmark-circle" item-end></ion-icon>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n\n<!-- Bottom Buttons -->\n<ion-footer transparent no-padding no-margin>\n  <button ion-button clear block (click)="editProfile()">Edit Profile</button>\n  <!--<button ion-button block no-margin (click)="changePwd()">Change Password</button>-->\n</ion-footer>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/profile/profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/profile/profile.html"*/'<ion-header header-ios>\n  <ion-navbar transparent>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-title>{{data.toolbarTitle}}</ion-title>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content elastic-header>\n  <div padding background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n    <ion-thumbnail *ngIf="user != null">\n      <img [src]="user.avatar" />\n    </ion-thumbnail>\n    <h2 text-center parallax-title *ngIf="user != null">{{user.username}}</h2>\n    <h3 text-center parallax-subtitle *ngIf="user != null">{{user.firstName}} {{user.lastName}}</h3>\n  </div>\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Personal Info</h2>\n      <!--<button item-end ion-button button-action-shit><ion-icon name="more" role="img" class="icon icon-ios ion-ios-more" aria-label="more" ng-reflect-name="more"></ion-icon></button>-->\n    </ion-item-divider>\n    <!--First and Last Name-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <p><b>Name:</b> {{user.firstName}} {{user.lastName}}</p>\n      <!--<ion-icon icon-small ios="ios-create" md="md-create" item-end></ion-icon>-->\n    </ion-item>\n    <!--DoB-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <!--TODO: Add this to the user database, it should be empty or w/e (-, n/a, etc.) by default. if/when the user add this info then its displayed-->\n      <p><b>Birthday:</b> 15/4/1995</p>\n    </ion-item>\n    <!--Gender-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <!--TODO: Add this to the user database, it should be empty or w/e (-, n/a, etc.) by default. if/when the user add this info then its displayed-->\n      <p><b>Gender:</b> Female</p>\n    </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Account Info</h2>\n    </ion-item-divider>\n    <!--Username-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <p><b>Username:</b> {{user.username}}</p>\n    </ion-item>\n    <!--Email-->\n    <ion-item>\n      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>\n      <p><b>Email:</b> {{user.email}}</p>\n    </ion-item>\n    <!--Password-->\n    <ion-item no-margin>\n      <ion-icon color="primary" name="code-working" item-start></ion-icon>\n      <!--<p><b>Password:</b> ********</p>\n      <ion-icon icon-small name="send" item-end (click)="changePwd()"></ion-icon>-->\n      <button no-padding no-margin ion-button clear (click)="changePwd()">Change Password</button>\n    </ion-item>\n    <!--QR-->\n    <ion-item no-margin>\n      <ion-icon color="primary" name="finger-print" item-start></ion-icon>\n      <!--<p ><b>Show QR Code</b></p>-->\n      <button no-padding no-margin ion-button clear (click)="getQr()">Show QR Code</button>\n    </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item-divider border no-lines>\n      <h2 item-subtitle>Connected Accounts</h2>\n    </ion-item-divider>\n    <!--Facebook-->\n    <ion-item>\n      <ion-icon color="primary" ios="logo-facebook" md="logo-facebook" item-start></ion-icon>\n      <p no-padding>Facebook</p>\n      <!--TODO: do a check to decide which icon to display-->\n      <ion-icon color="primary" name="close-circle" item-end></ion-icon>\n    </ion-item>\n    <!--Google-->\n    <ion-item>\n      <ion-icon color="primary" ios="logo-google" md="logo-google" item-start></ion-icon>\n      <p no-padding>Google+</p>\n      <!--TODO: do a check to decide which icon to display-->\n      <ion-icon color="primary" name="checkmark-circle" item-end></ion-icon>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n\n<!-- Bottom Buttons -->\n<ion-footer transparent no-padding no-margin>\n  <button ion-button clear block (click)="editProfile()">Edit Profile</button>\n  <!--<button ion-button block no-margin (click)="changePwd()">Change Password</button>-->\n</ion-footer>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/pages/profile/profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], ProfilePage);
     return ProfilePage;
 }());
@@ -765,7 +765,7 @@ module.exports = webpackAsyncContext;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(140);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -785,7 +785,7 @@ var HomePageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
             ],
         })
     ], HomePageModule);
@@ -817,7 +817,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(720);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_manage_event_manage_event__ = __webpack_require__(169);
@@ -887,7 +887,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/add-friend/add-friend.module#AddFriendPageModule', name: 'AddFriendPage', segment: 'add-friend', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/avatars/avatars.module#AvatarsPageModule', name: 'AvatarsPage', segment: 'avatars', priority: 'low', defaultHistory: [] },
@@ -901,13 +901,13 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/logout/logout.module#LogoutPageModule', name: 'LogoutPage', segment: 'logout', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/manage-event/manage-event.module#ManageEventPageModule', name: 'ManageEventPage', segment: 'manage-event', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/qr-code/qr-code.module#QrCodePageModule', name: 'QrCodePage', segment: 'qr-code', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/qr-scan/qr-scan.module#QrScanPageModule', name: 'QrScanPage', segment: 'qr-scan', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/qr-code/qr-code.module#QrCodePageModule', name: 'QrCodePage', segment: 'qr-code', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/reset/reset.module#ResetPageModule', name: 'ResetPage', segment: 'reset', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/view-event-participants/view-event-participants.module#ViewEventParticipantsPageModule', name: 'ViewEventParticipantsPage', segment: 'view-event-participants', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/view-event/view-event.module#ViewEventPageModule', name: 'ViewEventPage', segment: 'view-event', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/view-event/view-event.module#ViewEventPageModule', name: 'ViewEventPage', segment: 'view-event', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reset/reset.module#ResetPageModule', name: 'ResetPage', segment: 'reset', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_13_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_18__app_api_config__["a" /* FIREBASE_CONFIG */]),
@@ -917,7 +917,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_17_angularfire2_storage__["a" /* AngularFireStorageModule */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_home_home_module__["HomePageModule"]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
@@ -931,7 +931,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
                 __WEBPACK_IMPORTED_MODULE_14_angularfire2_database__["a" /* AngularFireDatabase */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] },
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_20__ionic_native_google_maps__["a" /* GoogleMaps */],
                 __WEBPACK_IMPORTED_MODULE_19__ionic_native_geolocation__["a" /* Geolocation */],
                 __WEBPACK_IMPORTED_MODULE_21__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]
@@ -951,7 +951,7 @@ var AppModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(366);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(367);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(140);
@@ -973,6 +973,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 // Page declarations for navigations
 
 
@@ -981,18 +982,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, splashScreen, 
+    function MyApp(platform, statusBar, splashScreen, alertCtrl, 
         //public navCtrl: NavController,
         events) {
         var _this = this;
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
+        this.alertCtrl = alertCtrl;
         this.events = events;
         this.data = {
             "toolbarTitle": "Menu",
             "background": "assets/images/images/" + Math.ceil(Math.random() * 17) + ".jpg",
             "image": "assets/images/logo/1.png",
+            "userImage": "",
+            "username": "",
+            "userName": "",
             "title": "MeeTogether",
             "description": "Please login to ...something something meaningful something...",
         };
@@ -1009,13 +1014,13 @@ var MyApp = /** @class */ (function () {
         events.subscribe('login_status', function (isLogin, user) {
             if (isLogin && user != null) {
                 _this.isLogged = true;
-                _this.data.image = user.avatar;
-                _this.data.title = user.username;
-                _this.data.description = user.firstName + " " + user.lastName;
+                _this.data.userImage = user.avatar;
+                _this.data.username = user.username;
+                _this.data.userName = user.firstName + " " + user.lastName;
                 // TODO: NEED TO RETRIEVE THE DATA "CORRECTLY" ABOVE 
-                _this.data.image = "assets/images/avatars/20.jpg";
-                _this.data.title = "BoredPanda";
-                _this.data.description = "Jay Ansin";
+                _this.data.userImage = "assets/images/avatars/20.jpg";
+                _this.data.username = "BoredPanda";
+                _this.data.userName = "Jay Ansin";
                 _this.pages = [
                     { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */], icon: 'home' },
                     { title: 'My Profile', component: __WEBPACK_IMPORTED_MODULE_9__pages_profile_profile__["a" /* ProfilePage */], icon: 'person' },
@@ -1070,18 +1075,42 @@ var MyApp = /** @class */ (function () {
     };
     MyApp.prototype.logout = function () {
         //this.navCtrl.push('LogoutPage');
+        var alert = this.alertCtrl.create({
+            title: 'Confirm logout',
+            message: 'Are you sure you want to logout?',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Logout',
+                    handler: function () {
+                        // LOG USER OUT
+                        console.log('Logout clicked');
+                    }
+                }
+            ]
+        });
+        alert.present();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]) === "function" && _a || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <div header-background-image padding [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n      <ion-thumbnail>\n        <img *ngIf="isLogged == false" src="{{data.image}}" class="logo">\n        <img *ngIf="isLogged == true" src="{{data.image}}" class="avatar">\n      </ion-thumbnail>\n      <h2 ion-text header-title>{{data.title}}</h2>\n      <p *ngIf="isLogged == false">{{data.description}}</p>\n    </div>\n  </ion-header>\n\n  <ion-content>\n    <ion-list no-margin>\n      <button menuClose ion-item item-title main-menu no-lines border *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon icon-small item-left ios="ios-{{p.icon}}" md="md-{{p.icon}}"></ion-icon>{{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n  <!-- Bottom Buttons -->\n  <ion-footer transparent no-padding no-margin>\n    <ion-grid no-padding class="button-group">\n      <ion-row no-padding *ngIf="isLogged == false">\n        <ion-col no-padding>\n          <button ion-button item-start no-padding no-margin ion-button block color="primary" (click)="login()">\n            <ion-icon name="exit">Login</ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n      <ion-row no-padding *ngIf="isLogged == true">\n        <!--<ion-col no-padding><button ion-button item-start no-padding no-margin ion-button block color="secondary" (click)="profileSettings()"><ion-icon name="cog">Settings</ion-icon></button></ion-col>-->\n        <ion-col no-padding>\n          <button ion-button item-end no-padding no-margin ion-button block color="primary" (click)="logout()">\n            <ion-icon name="exit">Logout</ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-footer>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <div header-background-image padding [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n      <ion-thumbnail>\n        <img *ngIf="isLogged == false" src="{{data.image}}" class="logo">\n        <img *ngIf="isLogged == true" src="{{data.userImage}}" class="avatar">\n      </ion-thumbnail>\n      <!--Text if NOT logged in-->\n      <h2 *ngIf="isLogged == false" ion-text header-title>{{data.title}}</h2>\n      <p *ngIf="isLogged == false">{{data.description}}</p>\n      <!--Text if logged in-->\n      <h2 *ngIf="isLogged == true" ion-text header-title>{{data.username}}</h2>\n      <p *ngIf="isLogged == false">{{data.userName}}</p>\n    </div>\n  </ion-header>\n\n  <ion-content>\n    <ion-list no-margin>\n      <button menuClose ion-item item-title main-menu no-lines border *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon icon-small item-left ios="ios-{{p.icon}}" md="md-{{p.icon}}"></ion-icon>{{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n  <!-- Bottom Buttons -->\n  <ion-footer transparent no-padding no-margin>\n    <ion-grid no-padding class="button-group">\n      <ion-row no-padding *ngIf="isLogged == false">\n        <ion-col no-padding>\n          <button ion-button item-start no-padding no-margin ion-button block color="primary" (click)="login()">\n            <ion-icon name="exit">Login</ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n      <ion-row no-padding *ngIf="isLogged == true">\n        <!--<ion-col no-padding><button ion-button item-start no-padding no-margin ion-button block color="secondary" (click)="profileSettings()"><ion-icon name="cog">Settings</ion-icon></button></ion-col>-->\n        <ion-col no-padding>\n          <button ion-button item-end no-padding no-margin ion-button block color="primary" (click)="logout()">\n            <ion-icon name="exit">Logout</ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-footer>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/xoxo/Dropbox/CPA/PRJ666/prj666g1-jay/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=app.component.js.map

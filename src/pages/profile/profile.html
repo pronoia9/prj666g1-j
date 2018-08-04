@@ -28,16 +28,16 @@
     </ion-item>
     <!--DoB-->
     <ion-item>
-        <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
-        <!--TODO: Add this to the user database, it should be empty or w/e (-, n/a, etc.) by default. if/when the user add this info then its displayed-->
-        <p><b>Birthday:</b> 15/4/1995</p>
-      </ion-item>
-      <!--Gender-->
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <!--TODO: Add this to the user database, it should be empty or w/e (-, n/a, etc.) by default. if/when the user add this info then its displayed-->
+      <p><b>Birthday:</b> 15/4/1995</p>
+    </ion-item>
+    <!--Gender-->
     <ion-item>
-        <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
-        <!--TODO: Add this to the user database, it should be empty or w/e (-, n/a, etc.) by default. if/when the user add this info then its displayed-->
-        <p><b>Gender:</b> Female</p>
-      </ion-item>
+      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
+      <!--TODO: Add this to the user database, it should be empty or w/e (-, n/a, etc.) by default. if/when the user add this info then its displayed-->
+      <p><b>Gender:</b> Female</p>
+    </ion-item>
   </ion-item-group>
 
   <ion-item-group>
@@ -55,15 +55,17 @@
       <p><b>Email:</b> {{user.email}}</p>
     </ion-item>
     <!--Password-->
-    <ion-item>
-      <ion-icon color="primary" name="arrow-dropright" item-start></ion-icon>
-      <p><b>Password:</b> *********</p>
-      <ion-icon icon-small name="send" item-end (click)="changePwd()"></ion-icon>
+    <ion-item no-margin>
+      <ion-icon color="primary" name="code-working" item-start></ion-icon>
+      <!--<p><b>Password:</b> ********</p>
+      <ion-icon icon-small name="send" item-end (click)="changePwd()"></ion-icon>-->
+      <button no-padding no-margin ion-button clear (click)="changePwd()">Change Password</button>
     </ion-item>
     <!--QR-->
-    <ion-item (click)="getQr()">
+    <ion-item no-margin>
       <ion-icon color="primary" name="finger-print" item-start></ion-icon>
-      <p><b>Show QR Code</b></p>
+      <!--<p ><b>Show QR Code</b></p>-->
+      <button no-padding no-margin ion-button clear (click)="getQr()">Show QR Code</button>
     </ion-item>
   </ion-item-group>
 
