@@ -29,7 +29,8 @@
           <div card-title>{{e.eventName}}</div>
           <!-- Event Description and Date -->
           <div text-wrap card-subtitle>
-            <b>Description:</b> {{e.description}} <br>
+            <b>Description:</b> {{e.description}}
+            <br>
             <!--<b>Creator:</b> {{e.creator}} <br>-->
             <b>Time:</b> {{e.date | date:'EEEE, MMMM d y h:mm a'}}</div>
         </ion-card>
@@ -39,8 +40,16 @@
 </ion-content>
 
 <!-- Bottom Button -->
-<ion-footer transparent>
-  <ion-fab bottom right>
+<ion-footer no-padding transparent>
+  <ion-grid no-padding class="button-group">
+    <ion-row no-padding>
+      <ion-col><button ion-button block clear color="primary" no-padding no-margin>Events</button></ion-col>
+      <ion-col><button ion-button block clear color="primary" no-padding no-margin>Requests</button></ion-col>
+      <ion-col><button ion-button block clear color="primary" no-padding no-margin (click)="createEvent()">Create</button></ion-col>
+      <ion-col><button ion-button block clear color="primary" no-padding no-margin (click)="joinEvent()">Join</button></ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--<ion-fab bottom right>
     <button ion-fab>
       <ion-icon ios="ios-add" md="md-add"></ion-icon>
     </button>
@@ -48,5 +57,5 @@
       <button (click)="createEvent()" ion-fab>Create</button>
       <button (click)="joinEvent()" ion-fab>Join</button>
     </ion-fab-list>
-  </ion-fab>
+  </ion-fab>-->
 </ion-footer>

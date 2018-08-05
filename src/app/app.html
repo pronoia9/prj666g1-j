@@ -27,7 +27,7 @@
     <ion-grid no-padding class="button-group">
       <ion-row no-padding *ngIf="isLogged == false">
         <ion-col no-padding>
-          <button ion-button item-start no-padding no-margin ion-button block color="primary" (click)="login()">
+          <button ion-button item-start no-padding no-margin block color="primary" (click)="login()">
             <ion-icon name="exit">Login</ion-icon>
           </button>
         </ion-col>
@@ -35,7 +35,7 @@
       <ion-row no-padding *ngIf="isLogged == true">
         <!--<ion-col no-padding><button ion-button item-start no-padding no-margin ion-button block color="secondary" (click)="profileSettings()"><ion-icon name="cog">Settings</ion-icon></button></ion-col>-->
         <ion-col no-padding>
-          <button ion-button item-end no-padding no-margin ion-button block color="primary" (click)="logout()">
+          <button ion-button item-end no-padding no-margin block color="primary" (click)="logout()">
             <ion-icon name="exit">Logout</ion-icon>
           </button>
         </ion-col>

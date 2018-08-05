@@ -37,12 +37,28 @@
 </ion-content>
 
 <!-- Bottom Button -->
-<ion-footer transparent>
-  <ion-fab bottom right>
-    <button ion-fab>...</button>
-    <ion-fab-list side="top">
+<ion-footer transparent no-padding no-margin>
+  <ion-grid no-padding class="button-group">
+    <ion-row no-padding>
+      <ion-col no-padding>
+        <button ion-button item-start no-padding no-margin block clear color="primary">Friends</button>
+      </ion-col>
+      <ion-col no-padding>
+        <button ion-button no-padding no-margin block clear color="primary">Pending</button>
+      </ion-col>
+      <ion-col no-padding>
+        <button ion-button no-padding no-margin block clear color="primary">Blocked</button>
+      </ion-col>
+      <ion-col no-padding>
+        <button ion-button item-end no-padding no-margin block clear color="primary">Add</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--<ion-fab bottom right>
       <button ion-fab (click)="addFriend()">+</button>
-      <button ion-fab (click)="editFriends()">=</button>
-    </ion-fab-list>
-  </ion-fab>
+      <ion-fab-list side="top">
+        <button ion-fab (click)="addFriend()">+</button>
+        <button ion-fab (click)="editFriends()">=</button>
+      </ion-fab-list>
+    </ion-fab>-->
 </ion-footer>
