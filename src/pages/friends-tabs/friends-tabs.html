@@ -1,0 +1,16 @@
+<ion-header header-ios>
+    <ion-navbar transparent>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <!--<ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>-->
+    </ion-navbar>
+
+<ion-content padding>
+</ion-content>
+
+<ion-footer no-padding>
+  <ion-tabs #tabs tabsPlacement="bottom" selectedIndex="0">
+    <ion-tab [tabTitle]="tab.title" [tabIcon]="tab.icon" [root]="tab.page" *ngFor="let tab of data.tabs;"></ion-tab>
+  </ion-tabs>
+</ion-footer>

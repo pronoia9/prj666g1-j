@@ -40044,6 +40044,36 @@ page-friend-list ion-badge {
   bottom: 0;
 }
 
+page-friend-list .button-group .col:first-child:not(:last-child) {
+  padding-right: 0;
+}
+
+page-friend-list .button-group .col:first-child:not(:last-child) .button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+}
+
+page-friend-list .button-group .col:not(:first-child):not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+page-friend-list .button-group .col:not(:first-child):not(:last-child) .button {
+  border-radius: 0;
+  text-align: center;
+}
+
+page-friend-list .button-group .col:last-child:not(:first-child) {
+  padding-left: 0;
+}
+
+page-friend-list .button-group .col:last-child:not(:first-child) .button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  text-align: center;
+}
+
 page-home .scroll-content {
   margin-top: 0 !important;
 }
@@ -40344,6 +40374,40 @@ page-manage-event [background-size] [search-bar-bcg] [search-bar-title] {
 
 page-manage-event [background-size] [search-bar-bcg] .searchbar-input {
   border-radius: 8px;
+}
+
+page-manage-event .button-group .col {
+  text-align: center;
+}
+
+page-manage-event .button-group .col:first-child:not(:last-child) {
+  padding-right: 0;
+}
+
+page-manage-event .button-group .col:first-child:not(:last-child) .button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+}
+
+page-manage-event .button-group .col:not(:first-child):not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+page-manage-event .button-group .col:not(:first-child):not(:last-child) .button {
+  border-radius: 0;
+  text-align: center;
+}
+
+page-manage-event .button-group .col:last-child:not(:first-child) {
+  padding-left: 0;
+}
+
+page-manage-event .button-group .col:last-child:not(:first-child) .button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  text-align: center;
 }
 
 @-webkit-keyframes headerOff {
